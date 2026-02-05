@@ -1,0 +1,28 @@
+{
+  "name": "kivi-website",
+  "version": "1.0.0",
+  "description": "KIVI Sauna Hat E-commerce Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'Static site - no build needed'",
+    "test": "echo 'No tests yet'"
+  },
+  "keywords": [
+    "sauna",
+    "wellness",
+    "ecommerce"
+  ],
+  "author": "KIVI",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "stripe": "^14.12.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.15.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

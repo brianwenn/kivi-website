@@ -1,0 +1,67 @@
+# Netlify Configuration for KIVI Website
+
+[build]
+  # Path to serverless functions
+  functions = "netlify/functions"
+  
+  # Publish directory (root for static HTML site)
+  publish = "."
+  
+  # Build command (static site, no build needed)
+  command = "echo 'Static site deployed'"
+
+# Function configuration
+[functions]
+  # Directory where functions are stored
+  directory = "netlify/functions"
+  
+  # Node version for functions
+  node_bundler = "esbuild"
+
+# Redirect rules for functions
+[[redirects]]
+  from = "/.netlify/functions/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = false
+
+# SPA redirect for better routing (optional)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
+  conditions = {Role = ["!admin"]}
+
+# Headers for security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache control for static assets
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Environment variables (set these in Netlify dashboard)
+# STRIPE_SECRET_KEY = "sk_test_..." (for test mode)
+# STRIPE_SECRET_KEY = "sk_live_..." (for production)
+# URL = "https://your-site.netlify.app"
+
+# Dev server configuration
+[dev]
+  command = "echo 'Development server'"
+  framework = "#static"
+  targetPort = 8888
+  publish = "."
+  autoLaunch = true

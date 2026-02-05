@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed — KIVI</title>
+    <meta name="description" content="Your KIVI order has been confirmed. Thank you for your purchase.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --stone-grey: #E8E5E0;
+            --charcoal: #2B2B2B;
+            --warm-white: #FAFAF8;
+            --smoke: #666666;
+            --earth: #8B7F6A;
+            --ash: #B8B0A3;
+            --deep-charcoal: #1A1A1A;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--charcoal);
+            background-color: var(--warm-white);
+            font-size: 16px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        h1, h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+        
+        .success-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        
+        .success-content {
+            max-width: 600px;
+            text-align: center;
+            background: var(--warm-white);
+            padding: 60px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .success-icon {
+            font-size: 64px;
+            margin-bottom: 24px;
+            color: var(--earth);
+        }
+        
+        h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            margin-bottom: 16px;
+            color: var(--charcoal);
+        }
+        
+        .success-message {
+            font-size: 18px;
+            color: var(--smoke);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+        
+        .order-details {
+            background: var(--stone-grey);
+            padding: 24px;
+            border-radius: 4px;
+            margin-bottom: 32px;
+            text-align: left;
+        }
+        
+        .order-details h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+        
+        .order-details p {
+            margin-bottom: 8px;
+            color: var(--smoke);
+        }
+        
+        .order-details strong {
+            color: var(--charcoal);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            border: none;
+            cursor: pointer;
+            transition: all 200ms ease;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        
+        .btn-primary {
+            background: var(--deep-charcoal);
+            color: var(--warm-white);
+        }
+        
+        .btn-primary:hover {
+            background: var(--charcoal);
+        }
+        
+        .care-link {
+            display: block;
+            margin-top: 24px;
+            color: var(--earth);
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .care-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-content">
+            <div class="success-icon">✓</div>
+            <h1>Order Confirmed</h1>
+            <p class="success-message">
+                Thank you for your order. You'll receive a confirmation email shortly with your order details and tracking information.
+            </p>
+            
+            <div class="order-details">
+                <h2>What's Next?</h2>
+                <p><strong>Shipping:</strong> Your KIVI sauna hat will arrive within 5–7 business days.</p>
+                <p><strong>Email:</strong> Check your inbox for order confirmation and tracking.</p>
+                <p><strong>Questions?</strong> Contact us at hello@kivihats.com</p>
+            </div>
+            
+            <a href="index.html" class="btn btn-primary">Return to Home</a>
+            
+            <a href="index.html#care-guide" class="care-link">
+                View Care Guide for Your New Hat →
+            </a>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+    <script>
+        // Clear cart after successful purchase
+        Cart.clear();
+        
+        // Optional: Track conversion
+        const urlParams = new URLSearchParams(window.location.search);
+        const sessionId = urlParams.get('session_id');
+        
+        if (sessionId) {
+            console.log('Order completed, session:', sessionId);
+            // Send to analytics if needed
+            // Example: gtag('event', 'purchase', { transaction_id: sessionId });
+        }
+    </script>
+</body>
+</html>

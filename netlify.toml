@@ -1,4 +1,4 @@
- Netlify Configuration for KIVI Website
+# Netlify Configuration for KIVI Website
 
 [build]
   # Path to serverless functions
@@ -43,9 +43,3 @@
 # STRIPE_SECRET_KEY = "sk_test_..." (for test mode)
 # STRIPE_SECRET_KEY = "sk_live_..." (for production)
 # URL = "https://your-site.netlify.app"
-
-
-
-
-
-

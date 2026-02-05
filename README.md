@@ -1,2 +1,2 @@
-# kivi
+# KIVI
 KIVI Sauna Hats

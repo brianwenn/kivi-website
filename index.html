@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KIVI — Premium Wool Sauna Hats for Serious Heat Sessions</title>
-    <meta name="description" content="Handmade merino wool sauna hats designed for heat regulation and extended sauna sessions. Free shipping. 30-day returns.">
-    
+    <meta name="description"
+        content="Handmade merino wool sauna hats designed for heat regulation and extended sauna sessions. Free shipping. 30-day returns.">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
     <style>
         :root {
             --stone-grey: #E8E5E0;
@@ -21,23 +25,23 @@
             --ash: #B8B0A3;
             --deep-charcoal: #1A1A1A;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         *,
         *::before,
         *::after {
             box-sizing: border-box;
         }
-        
+
         html {
             overflow-x: hidden;
         }
-        
+
         body {
             font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--charcoal);
@@ -50,50 +54,68 @@
             width: 100%;
             max-width: 100vw;
         }
-        
-        h1, h2, h3, h4, h5, h6 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Cormorant Garamond', serif;
             font-weight: 500;
             letter-spacing: -0.02em;
             line-height: 1.2;
         }
-        
-        h1 { font-size: clamp(32px, 5vw, 48px); }
-        h2 { font-size: clamp(28px, 4vw, 36px); }
-        h3 { font-size: clamp(20px, 3vw, 24px); }
-        
+
+        h1 {
+            font-size: clamp(32px, 5vw, 48px);
+        }
+
+        h2 {
+            font-size: clamp(28px, 4vw, 36px);
+        }
+
+        h3 {
+            font-size: clamp(20px, 3vw, 24px);
+        }
+
         a {
             color: inherit;
             text-decoration: none;
             transition: color 200ms ease;
         }
-        
+
         a:hover {
             color: var(--earth);
         }
-        
+
         img {
             max-width: 100%;
             height: auto;
             display: block;
         }
-        
+
         /* Layout */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 16px;
         }
-        
+
         .section {
             padding: 80px 0;
         }
-        
+
         @media (min-width: 768px) {
-            .section { padding: 120px 0; }
-            .container { padding: 0 32px; }
+            .section {
+                padding: 120px 0;
+            }
+
+            .container {
+                padding: 0 32px;
+            }
         }
-        
+
         /* Header */
         header {
             position: sticky;
@@ -103,7 +125,7 @@
             padding: 16px 0;
             z-index: 1000;
         }
-        
+
         nav {
             display: flex;
             justify-content: space-between;
@@ -112,7 +134,7 @@
             margin: 0 auto;
             padding: 0 16px;
         }
-        
+
         .logo {
             font-family: 'Cormorant Garamond', serif;
             font-size: 28px;
@@ -120,27 +142,27 @@
             letter-spacing: 0.05em;
             cursor: pointer;
         }
-        
+
         .nav-links {
             display: flex;
             gap: 32px;
             list-style: none;
             align-items: center;
         }
-        
+
         .nav-links a {
             font-size: 15px;
             font-weight: 500;
             cursor: pointer;
         }
-        
+
         /* CRITICAL FIX: Cart icon and badge styles */
         .cart-icon {
             position: relative;
             cursor: pointer;
             font-size: 20px;
         }
-        
+
         .cart-badge {
             position: absolute;
             top: -8px;
@@ -157,14 +179,14 @@
             justify-content: center;
             padding: 2px;
         }
-        
+
         @media (max-width: 767px) {
             .nav-links {
                 gap: 20px;
                 font-size: 14px;
             }
         }
-        
+
         /* Buttons */
         .btn {
             display: inline-block;
@@ -177,29 +199,29 @@
             transition: all 200ms ease;
             text-align: center;
         }
-        
+
         .btn-primary {
             background: var(--deep-charcoal);
             color: var(--warm-white);
             border-radius: 4px;
         }
-        
+
         .btn-primary:hover {
             background: var(--charcoal);
             color: var(--warm-white);
         }
-        
+
         .btn-secondary {
             background: transparent;
             color: var(--charcoal);
             border: 1px solid var(--ash);
             border-radius: 4px;
         }
-        
+
         .btn-secondary:hover {
             background: var(--stone-grey);
         }
-        
+
         /* Hero Section */
         .hero {
             position: relative;
@@ -212,7 +234,7 @@
             background: linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%);
             overflow: hidden;
         }
-        
+
         .hero::before {
             content: '';
             position: absolute;
@@ -220,7 +242,7 @@
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="n"><feTurbulence baseFrequency="0.9" numOctaves="3"/></filter><rect width="100" height="100" filter="url(%23n)" opacity="0.05"/></svg>');
             opacity: 0.4;
         }
-        
+
         .hero-content {
             position: relative;
             z-index: 1;
@@ -228,27 +250,27 @@
             max-width: 800px;
             padding: 0 24px;
         }
-        
+
         .hero h1 {
             font-size: clamp(36px, 6vw, 60px);
             margin-bottom: 24px;
             line-height: 1.1;
         }
-        
+
         .hero-subheading {
             font-size: 18px;
             color: var(--ash);
             margin-bottom: 40px;
             font-weight: 500;
         }
-        
+
         .hero-cta {
             display: flex;
             gap: 16px;
             justify-content: center;
             flex-wrap: wrap;
         }
-        
+
         .text-link {
             font-size: 14px;
             color: var(--ash);
@@ -256,33 +278,33 @@
             display: inline-block;
             cursor: pointer;
         }
-        
+
         .text-link:hover {
             color: var(--warm-white);
         }
-        
+
         /* Value Proposition */
         .value-prop {
             background: var(--warm-white);
             text-align: center;
         }
-        
+
         .value-prop .container {
             max-width: 800px;
         }
-        
+
         .value-prop h2 {
             font-size: clamp(28px, 4vw, 36px);
             margin-bottom: 32px;
         }
-        
+
         .value-prop p {
             font-size: 18px;
             line-height: 1.7;
             color: var(--smoke);
             margin-bottom: 16px;
         }
-        
+
         .value-image {
             margin-top: 48px;
             border: 1px solid var(--ash);
@@ -290,91 +312,91 @@
             background: linear-gradient(135deg, #4a4a4a 0%, #3a3a3a 100%);
             max-width: 100%;
         }
-        
+
         /* Product Introduction */
         .product-intro {
             background: var(--stone-grey);
         }
-        
+
         .product-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 48px;
             align-items: center;
         }
-        
+
         @media (min-width: 1024px) {
             .product-grid {
                 grid-template-columns: 1fr 1fr;
             }
         }
-        
+
         .product-image {
             aspect-ratio: 1;
             background: var(--warm-white);
             border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             display: flex;
             align-items: center;
             justify-content: center;
             background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
             max-width: 100%;
         }
-        
+
         .product-image-placeholder {
             font-size: 80px;
             color: var(--ash);
         }
-        
+
         .product-details h2 {
             margin-bottom: 24px;
         }
-        
+
         .product-details p {
             color: var(--smoke);
             margin-bottom: 24px;
             line-height: 1.7;
         }
-        
+
         .product-price {
             font-size: 14px;
             color: var(--ash);
             margin-top: 24px;
         }
-        
+
         /* Educational Section */
         .educational {
             background: var(--warm-white);
             text-align: center;
         }
-        
+
         .educational h2 {
             margin-bottom: 16px;
         }
-        
+
         .educational-subheading {
             font-size: 18px;
             color: var(--smoke);
             margin-bottom: 64px;
         }
-        
+
         .features-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 48px;
             margin-top: 64px;
         }
-        
+
         @media (min-width: 768px) {
             .features-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
-        
+
         .feature {
             text-align: center;
         }
-        
+
         .feature-icon {
             width: 48px;
             height: 48px;
@@ -383,18 +405,18 @@
             stroke-width: 2;
             fill: none;
         }
-        
+
         .feature h3 {
             margin-bottom: 16px;
             font-size: 20px;
         }
-        
+
         .feature p {
             font-size: 15px;
             line-height: 1.7;
             color: var(--smoke);
         }
-        
+
         /* Product Features */
         .product-features {
             background: linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%);
@@ -402,7 +424,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .product-features::before {
             content: '';
             position: absolute;
@@ -410,105 +432,105 @@
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="n"><feTurbulence baseFrequency="0.9" numOctaves="3"/></filter><rect width="100" height="100" filter="url(%23n)" opacity="0.05"/></svg>');
             opacity: 0.3;
         }
-        
+
         .product-features .container {
             position: relative;
             z-index: 1;
         }
-        
+
         .features-content {
             max-width: 500px;
         }
-        
+
         .features-content h2 {
             margin-bottom: 32px;
         }
-        
+
         .features-list {
             list-style: none;
             margin-bottom: 32px;
         }
-        
+
         .features-list li {
             padding: 8px 0;
             font-size: 16px;
             color: var(--ash);
         }
-        
+
         .features-note {
             font-size: 15px;
             color: var(--ash);
             line-height: 1.7;
         }
-        
+
         /* Testimonial */
         .testimonial {
             background: var(--stone-grey);
             text-align: center;
         }
-        
+
         .testimonial .container {
             max-width: 700px;
         }
-        
+
         .testimonial-quote {
             font-size: clamp(20px, 3vw, 24px);
             font-weight: 500;
             line-height: 1.6;
             margin-bottom: 24px;
         }
-        
+
         .testimonial-attribution {
             font-size: 14px;
             color: var(--smoke);
         }
-        
+
         /* Final CTA */
         .final-cta {
             background: var(--deep-charcoal);
             color: var(--warm-white);
             text-align: center;
         }
-        
+
         .final-cta h2 {
             margin-bottom: 32px;
         }
-        
+
         .final-cta .btn-primary {
             background: var(--warm-white);
             color: var(--deep-charcoal);
         }
-        
+
         .final-cta .btn-primary:hover {
             background: var(--stone-grey);
         }
-        
+
         .final-cta-note {
             font-size: 14px;
             color: var(--ash);
             margin-top: 16px;
         }
-        
+
         /* Product Page */
         .product-page {
             padding-top: 80px;
             padding-bottom: 80px;
             overflow-x: hidden;
         }
-        
+
         .product-page .container {
             max-width: 1200px;
             width: 100%;
             margin: 0 auto;
             padding: 0 16px;
         }
-        
+
         @media (min-width: 768px) {
             .product-page .container {
                 padding: 0 32px;
             }
         }
-        
+
         .product-hero-grid {
             display: flex;
             flex-direction: column;
@@ -517,7 +539,7 @@
             max-width: 100%;
             margin-bottom: 0;
         }
-        
+
         @media (min-width: 1024px) {
             .product-hero-grid {
                 display: grid;
@@ -526,7 +548,7 @@
                 align-items: start;
             }
         }
-        
+
         .product-gallery {
             display: flex;
             flex-direction: column;
@@ -534,7 +556,7 @@
             width: 100%;
             max-width: 100%;
         }
-        
+
         .gallery-main {
             width: 100%;
             max-width: 100%;
@@ -547,7 +569,7 @@
             font-size: clamp(60px, 10vw, 100px);
             color: var(--ash);
         }
-        
+
         .gallery-thumbs {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -555,7 +577,7 @@
             width: 100%;
             max-width: 100%;
         }
-        
+
         .thumb {
             width: 100%;
             aspect-ratio: 1;
@@ -564,32 +586,32 @@
             cursor: pointer;
             transition: opacity 200ms;
         }
-        
+
         .thumb:hover {
             opacity: 0.7;
         }
-        
+
         .product-info {
             width: 100%;
             max-width: 100%;
         }
-        
+
         .product-info h1 {
             margin-bottom: 16px;
         }
-        
+
         .product-price-large {
             font-size: 28px;
             font-weight: 500;
             margin-bottom: 24px;
         }
-        
+
         .product-description {
             color: var(--smoke);
             margin-bottom: 32px;
             line-height: 1.7;
         }
-        
+
         .quantity-selector {
             display: flex;
             align-items: center;
@@ -597,14 +619,14 @@
             margin-bottom: 24px;
             flex-wrap: wrap;
         }
-        
+
         .quantity-controls {
             display: flex;
             border: 1px solid var(--ash);
             border-radius: 4px;
             overflow: hidden;
         }
-        
+
         .quantity-btn {
             padding: 8px 16px;
             background: transparent;
@@ -613,22 +635,22 @@
             font-size: 18px;
             color: var(--charcoal);
         }
-        
+
         .quantity-btn:hover {
             background: var(--stone-grey);
         }
-        
+
         .quantity-value {
             padding: 8px 24px;
             border-left: 1px solid var(--ash);
             border-right: 1px solid var(--ash);
         }
-        
+
         .add-to-cart {
             width: 100%;
             margin-bottom: 24px;
         }
-        
+
         .trust-indicators {
             display: flex;
             justify-content: flex-start;
@@ -638,51 +660,51 @@
             margin-bottom: 32px;
             flex-wrap: wrap;
         }
-        
+
         @media (min-width: 768px) {
             .trust-indicators {
                 justify-content: center;
                 gap: 24px;
             }
         }
-        
+
         .trust-indicator {
             display: flex;
             align-items: center;
             gap: 8px;
         }
-        
+
         /* CRITICAL FIX: Checkout Page Styles */
         .checkout-page {
             padding-top: 80px;
             min-height: 60vh;
         }
-        
+
         .checkout-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 48px;
             max-width: 100%;
         }
-        
+
         @media (min-width: 768px) {
             .checkout-grid {
                 grid-template-columns: 1fr;
                 gap: 32px;
             }
         }
-        
+
         @media (min-width: 1024px) {
             .checkout-grid {
                 grid-template-columns: 1.5fr 1fr;
                 gap: 48px;
             }
         }
-        
+
         .checkout-section h2 {
             margin-bottom: 24px;
         }
-        
+
         .checkout-item {
             display: grid;
             grid-template-columns: 60px 1fr auto auto;
@@ -693,17 +715,17 @@
             border-radius: 8px;
             margin-bottom: 16px;
         }
-        
+
         .checkout-item-image {
             font-size: 32px;
             text-align: center;
         }
-        
+
         .checkout-item-details h3 {
             font-size: 16px;
             margin-bottom: 8px;
         }
-        
+
         .checkout-item-quantity {
             display: flex;
             border: 1px solid var(--ash);
@@ -711,7 +733,7 @@
             overflow: hidden;
             width: fit-content;
         }
-        
+
         .qty-btn {
             padding: 4px 12px;
             background: transparent;
@@ -720,22 +742,22 @@
             font-size: 16px;
             color: var(--charcoal);
         }
-        
+
         .qty-btn:hover {
             background: var(--warm-white);
         }
-        
+
         .qty-value {
             padding: 4px 16px;
             border-left: 1px solid var(--ash);
             border-right: 1px solid var(--ash);
         }
-        
+
         .checkout-item-price {
             font-weight: 500;
             font-size: 16px;
         }
-        
+
         .checkout-item-remove {
             background: none;
             border: none;
@@ -744,25 +766,25 @@
             color: var(--smoke);
             padding: 4px 8px;
         }
-        
+
         .checkout-item-remove:hover {
             color: var(--charcoal);
         }
-        
+
         .checkout-summary {
             background: var(--stone-grey);
             padding: 32px;
             border-radius: 8px;
             height: fit-content;
         }
-        
+
         .summary-row {
             display: flex;
             justify-content: space-between;
             margin-bottom: 16px;
             font-size: 15px;
         }
-        
+
         .summary-row.total {
             font-size: 18px;
             font-weight: 600;
@@ -770,18 +792,18 @@
             border-top: 1px solid var(--ash);
             margin-top: 16px;
         }
-        
+
         .empty-cart {
             text-align: center;
             padding: 60px 20px;
         }
-        
+
         .empty-cart p {
             font-size: 18px;
             color: var(--smoke);
             margin-bottom: 24px;
         }
-        
+
         /* Accordion */
         .accordion {
             border-top: 1px solid var(--ash);
@@ -789,12 +811,12 @@
             max-width: 100%;
             overflow-x: hidden;
         }
-        
+
         .accordion-item {
             border-bottom: 1px solid var(--ash);
             width: 100%;
         }
-        
+
         .accordion-header {
             padding: 20px 0;
             cursor: pointer;
@@ -805,31 +827,31 @@
             font-size: 16px;
             width: 100%;
         }
-        
+
         .accordion-header:hover {
             color: var(--earth);
         }
-        
+
         .accordion-icon {
             transition: transform 200ms;
             flex-shrink: 0;
         }
-        
+
         .accordion-item.active .accordion-icon {
             transform: rotate(180deg);
         }
-        
+
         .accordion-content {
             max-height: 0;
             overflow: hidden;
             transition: max-height 300ms ease;
             width: 100%;
         }
-        
+
         .accordion-item.active .accordion-content {
             max-height: 2000px;
         }
-        
+
         .accordion-body {
             padding-bottom: 24px;
             color: var(--smoke);
@@ -839,27 +861,27 @@
             overflow-wrap: break-word;
             word-wrap: break-word;
         }
-        
+
         .accordion-body h4 {
             font-size: 16px;
             margin: 16px 0 8px;
             font-weight: 500;
             color: var(--charcoal);
         }
-        
+
         .accordion-body p {
             margin-bottom: 12px;
         }
-        
+
         .accordion-body ul {
             margin-left: 20px;
             margin-bottom: 12px;
         }
-        
+
         .accordion-body ul li {
             margin-bottom: 8px;
         }
-        
+
         /* FAQ Section */
         .faq-section {
             background: var(--stone-grey);
@@ -870,128 +892,128 @@
             padding-top: 80px;
             padding-bottom: 80px;
         }
-        
+
         @media (min-width: 768px) {
             .faq-section {
                 padding-top: 120px;
                 padding-bottom: 120px;
             }
         }
-        
+
         .faq-section .container {
             max-width: 1200px;
             width: 100%;
             margin: 0 auto;
             padding: 0 16px;
         }
-        
+
         @media (min-width: 768px) {
             .faq-section .container {
                 padding: 0 32px;
             }
         }
-        
+
         .faq-section h2 {
             margin-bottom: 48px;
             text-align: center;
         }
-        
+
         /* About Page */
         .about-hero {
             text-align: center;
             background: var(--warm-white);
         }
-        
+
         .about-hero .container {
             max-width: 800px;
         }
-        
+
         .about-hero h1 {
             margin-bottom: 24px;
         }
-        
+
         .about-hero p {
             font-size: 18px;
             color: var(--smoke);
         }
-        
+
         .about-philosophy {
             background: var(--stone-grey);
         }
-        
+
         .philosophy-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 48px;
             align-items: center;
         }
-        
+
         @media (min-width: 768px) {
             .philosophy-grid {
                 grid-template-columns: 1fr 1fr;
             }
         }
-        
+
         .philosophy-image {
             aspect-ratio: 4/3;
             background: linear-gradient(135deg, #4a4a4a 0%, #3a3a3a 100%);
             border-radius: 8px;
             max-width: 100%;
         }
-        
+
         .philosophy-content h2 {
             margin-bottom: 24px;
         }
-        
+
         .philosophy-content p {
             color: var(--smoke);
             line-height: 1.7;
             margin-bottom: 16px;
         }
-        
+
         /* How It Works */
         .how-hero {
             text-align: center;
             background: var(--warm-white);
         }
-        
+
         .how-hero h1 {
             margin-bottom: 16px;
         }
-        
+
         .how-hero p {
             font-size: 18px;
             color: var(--smoke);
         }
-        
+
         .problem-section {
             background: var(--warm-white);
         }
-        
+
         .problem-section .container {
             max-width: 800px;
         }
-        
+
         .problem-section p {
             font-size: 17px;
             line-height: 1.8;
             color: var(--smoke);
             margin-bottom: 20px;
         }
-        
+
         .solution-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 48px;
             align-items: center;
         }
-        
+
         @media (min-width: 768px) {
             .solution-grid {
                 grid-template-columns: 1fr 1fr;
             }
         }
-        
+
         .solution-diagram {
             aspect-ratio: 1;
             background: var(--stone-grey);
@@ -1003,237 +1025,239 @@
             font-size: 14px;
             max-width: 100%;
         }
-        
+
         .solution-content h2 {
             margin-bottom: 24px;
         }
-        
+
         .solution-content p {
             color: var(--smoke);
             line-height: 1.7;
             margin-bottom: 16px;
         }
-        
+
         /* Contact Page */
         .contact-page {
             background: var(--warm-white);
             min-height: 60vh;
         }
-        
+
         .contact-page .container {
             max-width: 600px;
         }
-        
+
         .contact-page h1 {
             margin-bottom: 32px;
         }
-        
+
         .contact-page p {
             line-height: 1.7;
             margin-bottom: 16px;
         }
-        
+
         .contact-email {
             font-size: 18px;
             color: var(--earth);
             display: inline-block;
             margin: 24px 0;
         }
-        
+
         .contact-divider {
             height: 1px;
             background: var(--ash);
             margin: 48px 0;
         }
-        
+
         .contact-hours {
             font-size: 15px;
             color: var(--smoke);
         }
-        
+
         /* Legal Pages Styling */
         .legal-page {
             background: var(--warm-white);
             min-height: 60vh;
         }
-        
+
         .legal-page .container {
             max-width: 800px;
         }
-        
+
         .legal-page h1 {
             margin-bottom: 16px;
         }
-        
+
         .legal-page .last-updated {
             font-size: 14px;
             color: var(--ash);
             margin-bottom: 48px;
         }
-        
+
         .legal-page h2 {
             margin-top: 48px;
             margin-bottom: 16px;
             font-size: 24px;
         }
-        
+
         .legal-page h3 {
             margin-top: 32px;
             margin-bottom: 12px;
             font-size: 18px;
         }
-        
+
         .legal-page p {
             line-height: 1.8;
             margin-bottom: 16px;
             color: var(--smoke);
         }
-        
+
         .legal-page ul {
             margin-left: 24px;
             margin-bottom: 16px;
         }
-        
+
         .legal-page ul li {
             margin-bottom: 8px;
             line-height: 1.7;
             color: var(--smoke);
         }
-        
+
         /* Care Guide Styling */
         .care-guide-intro {
             text-align: center;
             margin-bottom: 64px;
         }
-        
+
         .care-guide-intro p {
             font-size: 18px;
             color: var(--smoke);
             max-width: 700px;
             margin: 0 auto;
         }
-        
+
         .care-section {
             background: var(--stone-grey);
             padding: 48px 32px;
             border-radius: 8px;
             margin-bottom: 32px;
         }
-        
+
         .care-section h2 {
             margin-bottom: 24px;
         }
-        
+
         .care-section h3 {
             margin-top: 24px;
             margin-bottom: 12px;
             font-size: 18px;
         }
-        
+
         .care-section p {
             color: var(--smoke);
             line-height: 1.8;
             margin-bottom: 16px;
         }
-        
+
         .care-do-dont {
             display: grid;
             grid-template-columns: 1fr;
             gap: 32px;
             margin-top: 32px;
         }
-        
+
         @media (min-width: 768px) {
             .care-do-dont {
                 grid-template-columns: 1fr 1fr;
             }
         }
-        
-        .care-do, .care-dont {
+
+        .care-do,
+        .care-dont {
             background: var(--warm-white);
             padding: 32px;
             border-radius: 8px;
         }
-        
+
         .care-do h3 {
             color: var(--earth);
             margin-top: 0;
         }
-        
+
         .care-dont h3 {
             color: var(--charcoal);
             margin-top: 0;
         }
-        
-        .care-do ul, .care-dont ul {
+
+        .care-do ul,
+        .care-dont ul {
             list-style: none;
             margin-left: 0;
         }
-        
+
         .care-do ul li::before {
             content: "✓ ";
             color: var(--earth);
             font-weight: 600;
             margin-right: 8px;
         }
-        
+
         .care-dont ul li::before {
             content: "✗ ";
             color: var(--smoke);
             font-weight: 600;
             margin-right: 8px;
         }
-        
+
         /* Footer */
         footer {
             background: var(--charcoal);
             color: var(--ash);
             padding: 60px 0 40px;
         }
-        
+
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 48px;
             margin-bottom: 48px;
         }
-        
+
         .footer-column h4 {
             color: var(--warm-white);
             margin-bottom: 16px;
             font-size: 16px;
         }
-        
+
         .footer-links {
             list-style: none;
         }
-        
+
         .footer-links li {
             margin-bottom: 12px;
         }
-        
+
         .footer-links a {
             font-size: 14px;
             color: var(--ash);
             cursor: pointer;
         }
-        
+
         .footer-links a:hover {
             color: var(--warm-white);
         }
-        
+
         .newsletter {
             text-align: center;
             padding: 48px 0;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
         .newsletter h4 {
             margin-bottom: 16px;
             color: var(--warm-white);
         }
-        
+
         .newsletter-form {
             display: flex;
             gap: 8px;
@@ -1241,7 +1265,7 @@
             margin: 0 auto;
             flex-wrap: wrap;
         }
-        
+
         .newsletter-input {
             flex: 1;
             padding: 12px 16px;
@@ -1252,11 +1276,11 @@
             font-size: 14px;
             min-width: 200px;
         }
-        
+
         .newsletter-input::placeholder {
             color: var(--ash);
         }
-        
+
         .newsletter-btn {
             padding: 12px 24px;
             background: var(--warm-white);
@@ -1267,50 +1291,51 @@
             font-weight: 500;
             font-size: 14px;
         }
-        
+
         .newsletter-btn:hover {
             background: var(--stone-grey);
         }
-        
+
         .footer-bottom {
             text-align: center;
             padding-top: 32px;
             font-size: 12px;
         }
-        
+
         .social-links {
             margin-top: 16px;
         }
-        
+
         .social-links a {
             margin: 0 8px;
         }
-        
+
         /* Page Navigation */
         .page {
             display: none;
         }
-        
+
         .page.active {
             display: block;
         }
-        
+
         /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         .fade-in-up {
             animation: fadeInUp 0.8s ease-out;
         }
-        
+
         /* Mobile Menu */
         .mobile-menu-btn {
             display: none;
@@ -1320,12 +1345,12 @@
             cursor: pointer;
             color: var(--charcoal);
         }
-        
+
         @media (max-width: 767px) {
             .mobile-menu-btn {
                 display: block;
             }
-            
+
             .nav-links {
                 display: none;
                 position: absolute;
@@ -1337,13 +1362,14 @@
                 padding: 16px;
                 border-bottom: 1px solid var(--ash);
             }
-            
+
             .nav-links.active {
                 display: flex;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -1388,7 +1414,8 @@
             <div class="container">
                 <h2>Most people quit the sauna when their head overheats.</h2>
                 <p>Not because their body can't handle it.<br>Because their head can't.</p>
-                <p>KIVI keeps your head cool while your body works.<br>Longer sessions. Better results. No compromises.</p>
+                <p>KIVI keeps your head cool while your body works.<br>Longer sessions. Better results. No compromises.
+                </p>
                 <div class="value-image"></div>
             </div>
         </section>
@@ -1402,8 +1429,11 @@
                     </div>
                     <div class="product-details">
                         <h2>The KIVI Sauna Hat</h2>
-                        <p>100% natural merino wool. Engineered to regulate head temperature in extreme heat. Worn by sauna athletes, recovery enthusiasts, and anyone who takes heat seriously.</p>
-                        <p>Keeps your head 15–20°C cooler than ambient sauna temperature. Protects hair, scalp, and ears from heat damage. Extends comfortable session time by up to 40%. Unisex fit. Minimal design. Built to last.</p>
+                        <p>100% natural merino wool. Engineered to regulate head temperature in extreme heat. Worn by
+                            sauna athletes, recovery enthusiasts, and anyone who takes heat seriously.</p>
+                        <p>Keeps your head 15–20°C cooler than ambient sauna temperature. Protects hair, scalp, and ears
+                            from heat damage. Extends comfortable session time by up to 40%. Unisex fit. Minimal design.
+                            Built to last.</p>
                         <button class="btn btn-primary" onclick="showPage('product')">View Product Details</button>
                         <p class="product-price">Starting at $79</p>
                     </div>
@@ -1416,31 +1446,34 @@
             <div class="container">
                 <h2>Why wear a sauna hat?</h2>
                 <p class="educational-subheading">Heat rises. Your head feels it first.</p>
-                
+
                 <div class="features-grid">
                     <div class="feature">
                         <svg class="feature-icon" viewBox="0 0 24 24">
-                            <path d="M12 2v20M6 6l6-4 6 4M6 18l6 4 6-4"/>
+                            <path d="M12 2v20M6 6l6-4 6 4M6 18l6 4 6-4" />
                         </svg>
                         <h3>Temperature regulation</h3>
-                        <p>Your head dissipates 40% of body heat. In a sauna, this works against you. A wool hat insulates your head, preventing overheating and dizziness.</p>
+                        <p>Your head dissipates 40% of body heat. In a sauna, this works against you. A wool hat
+                            insulates your head, preventing overheating and dizziness.</p>
                     </div>
-                    
+
                     <div class="feature">
                         <svg class="feature-icon" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="12 6 12 12 16 14"/>
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
                         </svg>
                         <h3>Extended sessions</h3>
-                        <p>Most people leave when their head gets too hot. A sauna hat delays this threshold, allowing you to stay longer and reap the full benefits.</p>
+                        <p>Most people leave when their head gets too hot. A sauna hat delays this threshold, allowing
+                            you to stay longer and reap the full benefits.</p>
                     </div>
-                    
+
                     <div class="feature">
                         <svg class="feature-icon" viewBox="0 0 24 24">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                         </svg>
                         <h3>Protection</h3>
-                        <p>Extreme heat damages hair follicles and sensitive scalp tissue. Wool creates a protective barrier without trapping moisture.</p>
+                        <p>Extreme heat damages hair follicles and sensitive scalp tissue. Wool creates a protective
+                            barrier without trapping moisture.</p>
                     </div>
                 </div>
             </div>
@@ -1459,7 +1492,8 @@
                         <li>Hand-finished edges</li>
                         <li>Neutral colorways</li>
                     </ul>
-                    <p class="features-note">Every KIVI hat is inspected before shipping. We don't cut corners. We don't rush quality.</p>
+                    <p class="features-note">Every KIVI hat is inspected before shipping. We don't cut corners. We don't
+                        rush quality.</p>
                 </div>
             </div>
         </section>
@@ -1467,7 +1501,8 @@
         <!-- Testimonial -->
         <section class="testimonial section">
             <div class="container">
-                <p class="testimonial-quote">"I used to leave the sauna after 10 minutes. Now I comfortably sit for 25. The difference is entirely the hat."</p>
+                <p class="testimonial-quote">"I used to leave the sauna after 10 minutes. Now I comfortably sit for 25.
+                    The difference is entirely the hat."</p>
                 <p class="testimonial-attribution"> - Oliver H, Sydney</p>
             </div>
         </section>
@@ -1497,30 +1532,31 @@
                             <div class="thumb"></div>
                         </div>
                     </div>
-                    
+
                     <!-- Product Info -->
                     <div class="product-info">
                         <h1>KIVI Sauna Hat</h1>
                         <p class="product-price-large">$79.00</p>
-                        <p class="product-description">Premium merino wool sauna hat. Designed for heat regulation and extended sauna sessions.</p>
-                        
+                        <p class="product-description">Premium merino wool sauna hat. Designed for heat regulation and
+                            extended sauna sessions.</p>
+
                         <div class="quantity-selector">
                             <span>Quantity:</span>
                             <div class="quantity-controls">
-                                <button class="quantity-btn" id="decrease-qty" onclick="if(document.getElementById('quantity-value').textContent>1){document.getElementById('quantity-value').textContent=parseInt(document.getElementById('quantity-value').textContent)-1}">−</button>
+                                <button class="quantity-btn" id="decrease-qty">−</button>
                                 <span class="quantity-value" id="quantity-value">1</span>
-                                <button class="quantity-btn" id="increase-qty" onclick="if(parseInt(document.getElementById('quantity-value').textContent)<99){document.getElementById('quantity-value').textContent=parseInt(document.getElementById('quantity-value').textContent)+1}">+</button>
+                                <button class="quantity-btn" id="increase-qty">+</button>
                             </div>
                         </div>
-                        
-                        <button class="btn btn-primary add-to-cart" id="add-to-cart-btn" onclick="if(typeof Cart!=='undefined'&&Cart.add){var q=parseInt(document.getElementById('quantity-value').textContent)||1;Cart.add({id:'kivi-sauna-hat',name:'KIVI Sauna Hat',price:7900,quantity:q,image:'🧢'});this.textContent='Added! ✓';this.style.backgroundColor='var(--earth)';this.disabled=true;var btn=this;setTimeout(function(){btn.textContent='Add to Cart';btn.style.backgroundColor='';btn.disabled=false},1500)}">Add to Cart</button>
-                        
+
+                        <button class="btn btn-primary add-to-cart" id="add-to-cart-btn">Add to Cart</button>
+
                         <div class="trust-indicators">
                             <span class="trust-indicator">✓ Free shipping</span>
                             <span class="trust-indicator">✓ 30-day returns</span>
                             <span class="trust-indicator">✓ Handmade quality</span>
                         </div>
-                        
+
                         <!-- Product Accordions -->
                         <div class="accordion">
                             <div class="accordion-item">
@@ -1531,15 +1567,20 @@
                                 <div class="accordion-content">
                                     <div class="accordion-body">
                                         <p>Premium merino wool sauna hat engineered for serious heat sessions.</p>
-                                        <p>KIVI regulates head temperature in extreme sauna environments, allowing you to stay longer and maximize the benefits of heat exposure.</p>
+                                        <p>KIVI regulates head temperature in extreme sauna environments, allowing you
+                                            to stay longer and maximize the benefits of heat exposure.</p>
                                         <h4>What it does:</h4>
-                                        <p>Keeps your head 15–20°C cooler than ambient sauna temperature. Protects hair, scalp, and ears from heat damage. Prevents dizziness and premature session termination. Extends comfortable session duration by up to 40%.</p>
+                                        <p>Keeps your head 15–20°C cooler than ambient sauna temperature. Protects hair,
+                                            scalp, and ears from heat damage. Prevents dizziness and premature session
+                                            termination. Extends comfortable session duration by up to 40%.</p>
                                         <h4>Who it's for:</h4>
-                                        <p>Sauna enthusiasts, athletes focused on recovery, anyone practicing regular heat exposure, cold plunge + sauna users, and people serious about wellness rituals.</p>
+                                        <p>Sauna enthusiasts, athletes focused on recovery, anyone practicing regular
+                                            heat exposure, cold plunge + sauna users, and people serious about wellness
+                                            rituals.</p>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="accordion-item">
                                 <div class="accordion-header" onclick="toggleAccordion(this)">
                                     <span>Materials</span>
@@ -1552,11 +1593,12 @@
                                         <p><strong>Construction:</strong> Felted and hand-finished</p>
                                         <p><strong>Origin:</strong> Ethically sourced Australian merino</p>
                                         <h4>Why merino wool?</h4>
-                                        <p>Wool is naturally insulating, moisture-wicking, and heat-resistant. Unlike synthetic materials, wool regulates temperature without trapping sweat.</p>
+                                        <p>Wool is naturally insulating, moisture-wicking, and heat-resistant. Unlike
+                                            synthetic materials, wool regulates temperature without trapping sweat.</p>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="accordion-item">
                                 <div class="accordion-header" onclick="toggleAccordion(this)">
                                     <span>Sizing & Care</span>
@@ -1565,16 +1607,21 @@
                                 <div class="accordion-content">
                                     <div class="accordion-body">
                                         <h4>Sizing:</h4>
-                                        <p>One size fits most (56–60cm head circumference). Unisex fit. Stretches slightly with use.</p>
+                                        <p>One size fits most (56–60cm head circumference). Unisex fit. Stretches
+                                            slightly with use.</p>
                                         <h4>Care instructions:</h4>
-                                        <p>Spot clean with cool water and mild soap. Do not machine wash. Air dry flat, away from direct heat. Do not wring or twist.</p>
-                                        <p><a onclick="showPage('care-guide')" style="color: var(--earth); cursor: pointer;">View full care guide →</a></p>
+                                        <p>Spot clean with cool water and mild soap. Do not machine wash. Air dry flat,
+                                            away from direct heat. Do not wring or twist.</p>
+                                        <p><a onclick="showPage('care-guide')"
+                                                style="color: var(--earth); cursor: pointer;">View full care guide →</a>
+                                        </p>
                                         <h4>Lifespan:</h4>
-                                        <p>With proper care, your KIVI hat will last hundreds of sessions. Wool naturally resists odor and bacteria.</p>
+                                        <p>With proper care, your KIVI hat will last hundreds of sessions. Wool
+                                            naturally resists odor and bacteria.</p>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="accordion-item">
                                 <div class="accordion-header" onclick="toggleAccordion(this)">
                                     <span>Shipping & Returns</span>
@@ -1583,12 +1630,17 @@
                                 <div class="accordion-content">
                                     <div class="accordion-body">
                                         <h4>Shipping:</h4>
-                                        <p>Free standard shipping on all orders (5–7 business days). Express shipping available at checkout.</p>
-                                        <p><a onclick="showPage('shipping-returns')" style="color: var(--earth); cursor: pointer;">Full shipping & returns policy →</a></p>
+                                        <p>Free standard shipping on all orders (5–7 business days). Express shipping
+                                            available at checkout.</p>
+                                        <p><a onclick="showPage('shipping-returns')"
+                                                style="color: var(--earth); cursor: pointer;">Full shipping & returns
+                                                policy →</a></p>
                                         <h4>Returns:</h4>
-                                        <p>30-day return window. Unworn items only. Free return shipping. Refund issued within 5 business days of receipt.</p>
+                                        <p>30-day return window. Unworn items only. Free return shipping. Refund issued
+                                            within 5 business days of receipt.</p>
                                         <h4>Warranty:</h4>
-                                        <p>If your KIVI hat has a manufacturing defect, we'll replace it. No questions asked.</p>
+                                        <p>If your KIVI hat has a manufacturing defect, we'll replace it. No questions
+                                            asked.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1597,7 +1649,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- FAQ Section on Product Page -->
         <section class="faq-section section">
             <div class="container">
@@ -1610,11 +1662,13 @@
                         </div>
                         <div class="accordion-content">
                             <div class="accordion-body">
-                                <p>If you're doing regular sauna sessions above 75°C, yes. Your head overheats before your body, causing you to leave early. A hat extends your session and protects sensitive scalp tissue.</p>
+                                <p>If you're doing regular sauna sessions above 75°C, yes. Your head overheats before
+                                    your body, causing you to leave early. A hat extends your session and protects
+                                    sensitive scalp tissue.</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="accordion-item">
                         <div class="accordion-header" onclick="toggleAccordion(this)">
                             <span>Will this work for beginners?</span>
@@ -1622,11 +1676,12 @@
                         </div>
                         <div class="accordion-content">
                             <div class="accordion-body">
-                                <p>Absolutely. Beginners often benefit most because they're not yet conditioned to extreme heat. The hat makes the experience more comfortable from day one.</p>
+                                <p>Absolutely. Beginners often benefit most because they're not yet conditioned to
+                                    extreme heat. The hat makes the experience more comfortable from day one.</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="accordion-item">
                         <div class="accordion-header" onclick="toggleAccordion(this)">
                             <span>How hot can it handle?</span>
@@ -1634,11 +1689,12 @@
                         </div>
                         <div class="accordion-content">
                             <div class="accordion-body">
-                                <p>KIVI hats are tested up to 110°C (230°F), well beyond most sauna temperatures. Traditional Finnish saunas run 80–100°C.</p>
+                                <p>KIVI hats are tested up to 110°C (230°F), well beyond most sauna temperatures.
+                                    Traditional Finnish saunas run 80–100°C.</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="accordion-item">
                         <div class="accordion-header" onclick="toggleAccordion(this)">
                             <span>What if it doesn't fit?</span>
@@ -1646,7 +1702,8 @@
                         </div>
                         <div class="accordion-content">
                             <div class="accordion-body">
-                                <p>One size fits most (56–60cm). If it doesn't fit, return it within 30 days for a full refund.</p>
+                                <p>One size fits most (56–60cm). If it doesn't fit, return it within 30 days for a full
+                                    refund.</p>
                             </div>
                         </div>
                     </div>
@@ -1701,36 +1758,42 @@
                 <p>KIVI makes tools for people who understand that.</p>
             </div>
         </section>
-        
+
         <section class="about-philosophy section">
             <div class="container">
                 <div class="philosophy-grid">
                     <div class="philosophy-image"></div>
                     <div class="philosophy-content">
                         <h2>Why KIVI exists</h2>
-                        <p>The sauna is one of the few remaining rituals of discomfort in modern life. It demands patience. It rewards persistence.</p>
+                        <p>The sauna is one of the few remaining rituals of discomfort in modern life. It demands
+                            patience. It rewards persistence.</p>
                         <p>Most sauna accessories treat heat exposure like a trend to capitalize on. We don't.</p>
-                        <p>KIVI was built for people who take sauna seriously. Who understand that comfort in heat isn't about luxury - it's about preparation. Who know that the head overheats first and limits everything that follows.</p>
+                        <p>KIVI was built for people who take sauna seriously. Who understand that comfort in heat isn't
+                            about luxury - it's about preparation. Who know that the head overheats first and limits
+                            everything that follows.</p>
                         <p>We make one product. We make it well. We don't expand until we've perfected what we have.</p>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <section class="value-prop section">
             <div class="container" style="max-width: 700px;">
                 <h2>What quality means to us</h2>
                 <p>Every KIVI hat is hand-finished and inspected before shipping.</p>
-                <p>We source merino wool from ethical suppliers. We work with manufacturers who share our standards. We test every batch for consistency.</p>
-                <p>We don't rush production to meet demand. We don't cut corners to hit price points. We don't sell a product we wouldn't use ourselves.</p>
+                <p>We source merino wool from ethical suppliers. We work with manufacturers who share our standards. We
+                    test every batch for consistency.</p>
+                <p>We don't rush production to meet demand. We don't cut corners to hit price points. We don't sell a
+                    product we wouldn't use ourselves.</p>
                 <p>If it's not right, it doesn't ship.</p>
             </div>
         </section>
-        
+
         <section class="final-cta section">
             <div class="container">
                 <h2>Built for the long game.</h2>
-                <p style="color: var(--ash); margin-bottom: 32px;">KIVI isn't going anywhere. We're not chasing trends. We're building tools that last.</p>
+                <p style="color: var(--ash); margin-bottom: 32px;">KIVI isn't going anywhere. We're not chasing trends.
+                    We're building tools that last.</p>
                 <button class="btn btn-primary" onclick="showPage('product')">Shop KIVI</button>
             </div>
         </section>
@@ -1744,58 +1807,73 @@
                 <p>Understanding heat regulation in the sauna.</p>
             </div>
         </section>
-        
+
         <section class="problem-section section">
             <div class="container">
-                <p>Your head dissipates up to 40% of your body's heat. In normal environments, this keeps you cool. In a sauna, it works against you.</p>
-                <p>Because heat rises, your head is exposed to the highest temperatures in the room. Without protection, your scalp, ears, and brain overheat rapidly - long before your body reaches its limit.</p>
-                <p>This is why most people leave the sauna feeling like they "couldn't take it anymore." It's not your body. It's your head.</p>
+                <p>Your head dissipates up to 40% of your body's heat. In normal environments, this keeps you cool. In a
+                    sauna, it works against you.</p>
+                <p>Because heat rises, your head is exposed to the highest temperatures in the room. Without protection,
+                    your scalp, ears, and brain overheat rapidly - long before your body reaches its limit.</p>
+                <p>This is why most people leave the sauna feeling like they "couldn't take it anymore." It's not your
+                    body. It's your head.</p>
             </div>
         </section>
-        
+
         <section class="product-intro section">
             <div class="container">
                 <div class="solution-grid">
                     <div class="solution-diagram">Heat regulation diagram</div>
                     <div class="solution-content">
                         <h2>Insulation extends your threshold.</h2>
-                        <p>A wool sauna hat creates a thermal barrier around your head. This insulation keeps your scalp and brain 15–20°C cooler than the ambient sauna temperature.</p>
-                        <p>Wool is uniquely suited for this task: It insulates without trapping moisture. It breathes while protecting. It's heat-resistant up to 110°C. It's been used in sauna cultures for centuries.</p>
+                        <p>A wool sauna hat creates a thermal barrier around your head. This insulation keeps your scalp
+                            and brain 15–20°C cooler than the ambient sauna temperature.</p>
+                        <p>Wool is uniquely suited for this task: It insulates without trapping moisture. It breathes
+                            while protecting. It's heat-resistant up to 110°C. It's been used in sauna cultures for
+                            centuries.</p>
                         <p>The result: your head no longer determines when you leave. Your body does.</p>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <section class="testimonial section">
             <div class="container">
                 <h2>The science of heat regulation</h2>
-                <p style="color: var(--smoke); line-height: 1.7; margin-bottom: 20px;">Your brain maintains a core temperature of approximately 37°C (98.6°F). Even small increases above this threshold trigger discomfort, dizziness, and early termination of heat exposure.</p>
-                <p style="color: var(--smoke); line-height: 1.7; margin-bottom: 20px;">Wool's cellular structure creates air pockets that slow heat transfer. Unlike synthetic materials, wool also wicks moisture away from the skin, preventing the "wet heat" effect that accelerates discomfort.</p>
-                <p style="color: var(--smoke); line-height: 1.7;">This isn't about pushing past your limits. It's about removing the artificial limit your unprotected head creates.</p>
+                <p style="color: var(--smoke); line-height: 1.7; margin-bottom: 20px;">Your brain maintains a core
+                    temperature of approximately 37°C (98.6°F). Even small increases above this threshold trigger
+                    discomfort, dizziness, and early termination of heat exposure.</p>
+                <p style="color: var(--smoke); line-height: 1.7; margin-bottom: 20px;">Wool's cellular structure creates
+                    air pockets that slow heat transfer. Unlike synthetic materials, wool also wicks moisture away from
+                    the skin, preventing the "wet heat" effect that accelerates discomfort.</p>
+                <p style="color: var(--smoke); line-height: 1.7;">This isn't about pushing past your limits. It's about
+                    removing the artificial limit your unprotected head creates.</p>
             </div>
         </section>
-        
+
         <section class="educational section">
             <div class="container">
                 <h2>When to use</h2>
                 <div class="features-grid">
                     <div class="feature">
                         <h3>Traditional sauna</h3>
-                        <p>Dry heat, 80–100°C. This is where sauna hats perform best. Wear from the beginning of your session.</p>
+                        <p>Dry heat, 80–100°C. This is where sauna hats perform best. Wear from the beginning of your
+                            session.</p>
                     </div>
                     <div class="feature">
                         <h3>Infrared sauna</h3>
-                        <p>Lower temperatures (50–65°C) but longer sessions. Helps maintain comfort during extended exposure.</p>
+                        <p>Lower temperatures (50–65°C) but longer sessions. Helps maintain comfort during extended
+                            exposure.</p>
                     </div>
                     <div class="feature">
                         <h3>Contrast therapy</h3>
-                        <p>If alternating between sauna and cold plunge, wear the hat during heat phases. Remove for cold exposure.</p>
+                        <p>If alternating between sauna and cold plunge, wear the hat during heat phases. Remove for
+                            cold exposure.</p>
                     </div>
                 </div>
                 <div style="text-align: center; margin-top: 64px;">
                     <h2>Experience the difference.</h2>
-                    <button class="btn btn-primary" onclick="showPage('product')" style="margin-top: 24px;">Shop KIVI</button>
+                    <button class="btn btn-primary" onclick="showPage('product')" style="margin-top: 24px;">Shop
+                        KIVI</button>
                 </div>
             </div>
         </section>
@@ -1807,29 +1885,39 @@
             <div class="container">
                 <h1 style="text-align: center;">Care Guide</h1>
                 <div class="care-guide-intro">
-                    <p>Your KIVI sauna hat is built to last hundreds of sessions. Proper care ensures it performs at its best for years to come.</p>
+                    <p>Your KIVI sauna hat is built to last hundreds of sessions. Proper care ensures it performs at its
+                        best for years to come.</p>
                 </div>
 
                 <div class="care-section">
                     <h2>Daily Care</h2>
                     <p>After each sauna session, your hat needs minimal attention.</p>
-                    
+
                     <h3>Immediate Post-Session</h3>
-                    <p>Shake out excess moisture. Hang in a well-ventilated area to air dry. Never leave damp in a bag or enclosed space. The hat should be completely dry before your next use.</p>
-                    
+                    <p>Shake out excess moisture. Hang in a well-ventilated area to air dry. Never leave damp in a bag
+                        or enclosed space. The hat should be completely dry before your next use.</p>
+
                     <h3>Between Sessions</h3>
-                    <p>Store in a dry, ventilated space. Avoid plastic bags or airtight containers. A hook in your sauna or bathroom works well. Natural airflow prevents moisture buildup and maintains shape.</p>
+                    <p>Store in a dry, ventilated space. Avoid plastic bags or airtight containers. A hook in your sauna
+                        or bathroom works well. Natural airflow prevents moisture buildup and maintains shape.</p>
                 </div>
 
                 <div class="care-section">
                     <h2>Cleaning Your Hat</h2>
-                    <p>Wool naturally resists odor and bacteria. Most users never need to wash their hat. Occasional spot cleaning is sufficient for long-term use.</p>
-                    
+                    <p>Wool naturally resists odor and bacteria. Most users never need to wash their hat. Occasional
+                        spot cleaning is sufficient for long-term use.</p>
+
                     <h3>Spot Cleaning</h3>
-                    <p>Use cool water and a small amount of mild, wool-safe soap. Gently dab the affected area - never rub aggressively. Rinse with cool water. Press (don't wring) to remove excess water. Air dry flat on a clean towel, away from direct heat or sunlight.</p>
-                    
+                    <p>Use cool water and a small amount of mild, wool-safe soap. Gently dab the affected area - never
+                        rub aggressively. Rinse with cool water. Press (don't wring) to remove excess water. Air dry
+                        flat on a clean towel, away from direct heat or sunlight.</p>
+
                     <h3>Deep Cleaning (Rarely Needed)</h3>
-                    <p>Fill a basin with cool water and a small amount of wool wash or gentle detergent. Submerge the hat and gently agitate for 1–2 minutes. Let it soak for 10 minutes maximum. Rinse thoroughly with cool water until soap is completely removed. Press gently to remove water - never twist or wring. Reshape while damp. Lay flat on a clean, dry towel. Allow to air dry completely (24–48 hours). Never use a dryer, radiator, or direct heat source.</p>
+                    <p>Fill a basin with cool water and a small amount of wool wash or gentle detergent. Submerge the
+                        hat and gently agitate for 1–2 minutes. Let it soak for 10 minutes maximum. Rinse thoroughly
+                        with cool water until soap is completely removed. Press gently to remove water - never twist or
+                        wring. Reshape while damp. Lay flat on a clean, dry towel. Allow to air dry completely (24–48
+                        hours). Never use a dryer, radiator, or direct heat source.</p>
                 </div>
 
                 <div class="care-do-dont">
@@ -1845,7 +1933,7 @@
                             <li>Allow 24–48 hours for full drying</li>
                         </ul>
                     </div>
-                    
+
                     <div class="care-dont">
                         <h3>Don't</h3>
                         <ul>
@@ -1863,43 +1951,55 @@
 
                 <div class="care-section">
                     <h2>Longevity & Maintenance</h2>
-                    
+
                     <h3>Normal Wear</h3>
-                    <p>Some pilling is natural with wool products. Gently remove pills with a fabric shaver or sweater comb. Do not pull pills by hand - this can damage fibers. Slight stretching over time is normal. Reshape while damp if needed.</p>
-                    
+                    <p>Some pilling is natural with wool products. Gently remove pills with a fabric shaver or sweater
+                        comb. Do not pull pills by hand - this can damage fibers. Slight stretching over time is normal.
+                        Reshape while damp if needed.</p>
+
                     <h3>Expected Lifespan</h3>
-                    <p>With proper care, your KIVI hat will last 200–500 sessions. Heavy use (daily sessions) may show wear after 1–2 years. Occasional use (weekly sessions) can last 5+ years.</p>
-                    
+                    <p>With proper care, your KIVI hat will last 200–500 sessions. Heavy use (daily sessions) may show
+                        wear after 1–2 years. Occasional use (weekly sessions) can last 5+ years.</p>
+
                     <h3>When to Replace</h3>
-                    <p>Significant thinning of the wool. Loss of structural integrity (won't hold shape). Damage that affects heat protection. Normal wear and tear is covered under our quality standards.</p>
+                    <p>Significant thinning of the wool. Loss of structural integrity (won't hold shape). Damage that
+                        affects heat protection. Normal wear and tear is covered under our quality standards.</p>
                 </div>
 
                 <div class="care-section">
                     <h2>Troubleshooting</h2>
-                    
+
                     <h3>Hat smells after use</h3>
-                    <p>Ensure complete drying after each session. Air out in fresh air for several hours. Spot clean if needed. Odor-resistant wool rarely requires deep cleaning.</p>
-                    
+                    <p>Ensure complete drying after each session. Air out in fresh air for several hours. Spot clean if
+                        needed. Odor-resistant wool rarely requires deep cleaning.</p>
+
                     <h3>Hat has lost its shape</h3>
-                    <p>Dampen with cool water. Reshape by hand while damp. Lay flat to dry on a clean towel. Avoid over-stretching during reshaping.</p>
-                    
+                    <p>Dampen with cool water. Reshape by hand while damp. Lay flat to dry on a clean towel. Avoid
+                        over-stretching during reshaping.</p>
+
                     <h3>Wool feels rough or stiff</h3>
-                    <p>This can happen after improper washing. Rewet with cool water and a small amount of wool conditioner. Gently work through fibers. Rinse and air dry. Prevention: Always use cool water and wool-safe products.</p>
+                    <p>This can happen after improper washing. Rewet with cool water and a small amount of wool
+                        conditioner. Gently work through fibers. Rinse and air dry. Prevention: Always use cool water
+                        and wool-safe products.</p>
                 </div>
 
                 <div class="care-section">
                     <h2>Travel & Storage</h2>
-                    
+
                     <h3>Traveling with Your Hat</h3>
-                    <p>Ensure hat is completely dry before packing. Pack in a breathable bag or leave uncovered in luggage. Avoid crushing under heavy items. Reshape upon arrival if needed.</p>
-                    
+                    <p>Ensure hat is completely dry before packing. Pack in a breathable bag or leave uncovered in
+                        luggage. Avoid crushing under heavy items. Reshape upon arrival if needed.</p>
+
                     <h3>Long-Term Storage</h3>
-                    <p>If storing for months, ensure hat is completely clean and dry. Store in a breathable cotton or linen bag. Keep in a cool, dry place. Check periodically for moths (rare, but possible with natural wool).</p>
+                    <p>If storing for months, ensure hat is completely clean and dry. Store in a breathable cotton or
+                        linen bag. Keep in a cool, dry place. Check periodically for moths (rare, but possible with
+                        natural wool).</p>
                 </div>
 
                 <div style="text-align: center; margin-top: 64px;">
                     <p style="color: var(--smoke);">Still have questions about care?</p>
-                    <a onclick="showPage('contact')" class="btn btn-secondary" style="margin-top: 16px; cursor: pointer;">Contact Us</a>
+                    <a onclick="showPage('contact')" class="btn btn-secondary"
+                        style="margin-top: 16px; cursor: pointer;">Contact Us</a>
                 </div>
             </div>
         </section>
@@ -1910,7 +2010,7 @@
         <section class="section" style="background: var(--warm-white);">
             <div class="container" style="max-width: 800px;">
                 <h1 style="text-align: center; margin-bottom: 64px;">Frequently Asked Questions</h1>
-                
+
                 <h3 style="margin: 48px 0 24px; color: var(--earth);">General Questions</h3>
                 <div class="accordion">
                     <div class="accordion-item">
@@ -1920,11 +2020,13 @@
                         </div>
                         <div class="accordion-content">
                             <div class="accordion-body">
-                                <p>A sauna hat is a wool or felt cap worn during sauna sessions to protect your head from extreme heat. It insulates your scalp and brain, allowing you to stay in the sauna longer without discomfort.</p>
+                                <p>A sauna hat is a wool or felt cap worn during sauna sessions to protect your head
+                                    from extreme heat. It insulates your scalp and brain, allowing you to stay in the
+                                    sauna longer without discomfort.</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="accordion-item">
                         <div class="accordion-header" onclick="toggleAccordion(this)">
                             <span>Why do I need one?</span>
@@ -1932,11 +2034,13 @@
                         </div>
                         <div class="accordion-content">
                             <div class="accordion-body">
-                                <p>Your head overheats before your body in a sauna, causing premature session termination. A sauna hat regulates head temperature, extending comfortable session time by 30–50%.</p>
+                                <p>Your head overheats before your body in a sauna, causing premature session
+                                    termination. A sauna hat regulates head temperature, extending comfortable session
+                                    time by 30–50%.</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="accordion-item">
                         <div class="accordion-header" onclick="toggleAccordion(this)">
                             <span>Is this only for experienced sauna users?</span>
@@ -1944,12 +2048,13 @@
                         </div>
                         <div class="accordion-content">
                             <div class="accordion-body">
-                                <p>No. Beginners often benefit most because they're not yet conditioned to extreme heat. A sauna hat makes the experience more accessible from day one.</p>
+                                <p>No. Beginners often benefit most because they're not yet conditioned to extreme heat.
+                                    A sauna hat makes the experience more accessible from day one.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <h3 style="margin: 48px 0 24px; color: var(--earth);">Product Specific</h3>
                 <div class="accordion">
                     <div class="accordion-item">
@@ -1963,7 +2068,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="accordion-item">
                         <div class="accordion-header" onclick="toggleAccordion(this)">
                             <span>What sizes do you offer?</span>
@@ -1971,11 +2076,12 @@
                         </div>
                         <div class="accordion-content">
                             <div class="accordion-body">
-                                <p>One size fits most (56–60cm head circumference). The wool has slight stretch and conforms over time.</p>
+                                <p>One size fits most (56–60cm head circumference). The wool has slight stretch and
+                                    conforms over time.</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="accordion-item">
                         <div class="accordion-header" onclick="toggleAccordion(this)">
                             <span>How hot can it handle?</span>
@@ -1987,7 +2093,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="accordion-item">
                         <div class="accordion-header" onclick="toggleAccordion(this)">
                             <span>How long will it last?</span>
@@ -1995,12 +2101,13 @@
                         </div>
                         <div class="accordion-content">
                             <div class="accordion-body">
-                                <p>With proper care, hundreds of sessions. Wool is naturally durable and antimicrobial.</p>
+                                <p>With proper care, hundreds of sessions. Wool is naturally durable and antimicrobial.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <h3 style="margin: 48px 0 24px; color: var(--earth);">Care & Maintenance</h3>
                 <div class="accordion">
                     <div class="accordion-item">
@@ -2010,11 +2117,13 @@
                         </div>
                         <div class="accordion-content">
                             <div class="accordion-body">
-                                <p>Spot clean with cool water and mild soap. Air dry flat. Do not machine wash or tumble dry. <a onclick="showPage('care-guide')" style="color: var(--earth); cursor: pointer;">View full care guide →</a></p>
+                                <p>Spot clean with cool water and mild soap. Air dry flat. Do not machine wash or tumble
+                                    dry. <a onclick="showPage('care-guide')"
+                                        style="color: var(--earth); cursor: pointer;">View full care guide →</a></p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="accordion-item">
                         <div class="accordion-header" onclick="toggleAccordion(this)">
                             <span>Can I wash it in a machine?</span>
@@ -2027,7 +2136,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <h3 style="margin: 48px 0 24px; color: var(--earth);">Ordering & Shipping</h3>
                 <div class="accordion">
                     <div class="accordion-item">
@@ -2041,7 +2150,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="accordion-item">
                         <div class="accordion-header" onclick="toggleAccordion(this)">
                             <span>What's your return policy?</span>
@@ -2049,7 +2158,9 @@
                         </div>
                         <div class="accordion-content">
                             <div class="accordion-body">
-                                <p>30-day returns on unworn items. Full refund processed within 5 business days of receipt. <a onclick="showPage('shipping-returns')" style="color: var(--earth); cursor: pointer;">Full policy →</a></p>
+                                <p>30-day returns on unworn items. Full refund processed within 5 business days of
+                                    receipt. <a onclick="showPage('shipping-returns')"
+                                        style="color: var(--earth); cursor: pointer;">Full policy →</a></p>
                             </div>
                         </div>
                     </div>
@@ -2066,12 +2177,13 @@
                 <p>For questions about orders, products, or anything else, email us at:</p>
                 <a href="mailto:hello@mykivi.co" class="contact-email">hello@mykivi.co</a>
                 <p>We respond within 24 hours (usually faster).</p>
-                
+
                 <div class="contact-divider"></div>
-                
+
                 <div class="contact-hours">
                     <p><strong>Support hours:</strong><br>Monday-Friday, 9am-5pm AEST</p>
-                    <p style="margin-top: 24px;">For order tracking, check your email confirmation for a tracking link.</p>
+                    <p style="margin-top: 24px;">For order tracking, check your email confirmation for a tracking link.
+                    </p>
                 </div>
             </div>
         </section>
@@ -2085,53 +2197,80 @@
                 <p class="last-updated">Last updated: February 2026</p>
 
                 <h2>Shipping</h2>
-                
+
                 <h3>Domestic Shipping</h3>
-                <p>We offer free standard shipping on all domestic orders. Your KIVI sauna hat will be carefully packaged and shipped within 1–2 business days of order placement.</p>
+                <p>We offer free standard shipping on all domestic orders. Your KIVI sauna hat will be carefully
+                    packaged and shipped within 1–2 business days of order placement.</p>
                 <p><strong>Standard Shipping:</strong> 5–7 business days<br>
-                <strong>Express Shipping:</strong> 2–3 business days (available at checkout)</p>
-                
+                    <strong>Express Shipping:</strong> 2–3 business days (available at checkout)
+                </p>
+
                 <h3>International Shipping</h3>
-                <p>We currently ship to select international destinations. International shipping rates and delivery times vary by location.</p>
+                <p>We currently ship to select international destinations. International shipping rates and delivery
+                    times vary by location.</p>
                 <p><strong>Processing:</strong> 1–2 business days<br>
-                <strong>Delivery:</strong> 7–14 business days (varies by country)<br>
-                <strong>Customs:</strong> International orders may be subject to customs fees, duties, and taxes. These are the responsibility of the customer.</p>
-                
+                    <strong>Delivery:</strong> 7–14 business days (varies by country)<br>
+                    <strong>Customs:</strong> International orders may be subject to customs fees, duties, and taxes.
+                    These are the responsibility of the customer.
+                </p>
+
                 <h3>Order Tracking</h3>
-                <p>Once your order ships, you'll receive a confirmation email with a tracking number. You can track your package through the carrier's website. If you don't receive tracking information within 48 hours of order placement, contact us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a1c9c4cdcdcee1cac8d7c8c9c0d5d28fc2cecc">[email&#160;protected]</a>.</p>
-                
+                <p>Once your order ships, you'll receive a confirmation email with a tracking number. You can track your
+                    package through the carrier's website. If you don't receive tracking information within 48 hours of
+                    order placement, contact us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                        data-cfemail="a1c9c4cdcdcee1cac8d7c8c9c0d5d28fc2cecc">[email&#160;protected]</a>.</p>
+
                 <h3>Shipping Restrictions</h3>
-                <p>We cannot ship to P.O. boxes or military addresses at this time. If you have specific delivery requirements, contact us before placing your order.</p>
+                <p>We cannot ship to P.O. boxes or military addresses at this time. If you have specific delivery
+                    requirements, contact us before placing your order.</p>
 
                 <h2>Returns & Exchanges</h2>
-                
+
                 <h3>Return Window</h3>
-                <p>We accept returns within 30 days of delivery. The hat must be unworn, unused, and in its original condition.</p>
-                
+                <p>We accept returns within 30 days of delivery. The hat must be unworn, unused, and in its original
+                    condition.</p>
+
                 <h3>Return Process</h3>
-                <p>To initiate a return, email us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="eb838e878784ab80829d82838a9f98c5888486">[email&#160;protected]</a> with your order number and reason for return. We'll send you a prepaid return label within 24 hours. Pack the hat securely in its original packaging (if available). Attach the return label and drop off at the carrier location. Once we receive and inspect your return, we'll process your refund within 5 business days.</p>
-                
+                <p>To initiate a return, email us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                        data-cfemail="eb838e878784ab80829d82838a9f98c5888486">[email&#160;protected]</a> with your order
+                    number and reason for return. We'll send you a prepaid return label within 24 hours. Pack the hat
+                    securely in its original packaging (if available). Attach the return label and drop off at the
+                    carrier location. Once we receive and inspect your return, we'll process your refund within 5
+                    business days.</p>
+
                 <h3>Return Shipping</h3>
-                <p>Return shipping is free for domestic orders. For international returns, customers are responsible for return shipping costs unless the product is defective.</p>
-                
+                <p>Return shipping is free for domestic orders. For international returns, customers are responsible for
+                    return shipping costs unless the product is defective.</p>
+
                 <h3>Exchanges</h3>
-                <p>We currently offer a one-size-fits-most design. If your hat doesn't fit, we'll provide a full refund. For defects or quality issues, we'll send a replacement at no cost.</p>
-                
+                <p>We currently offer a one-size-fits-most design. If your hat doesn't fit, we'll provide a full refund.
+                    For defects or quality issues, we'll send a replacement at no cost.</p>
+
                 <h3>Non-Returnable Items</h3>
-                <p>We cannot accept returns on hats that have been worn in a sauna or show signs of use. This is for hygiene reasons. If you believe you received a defective product, contact us immediately - we'll make it right.</p>
-                
+                <p>We cannot accept returns on hats that have been worn in a sauna or show signs of use. This is for
+                    hygiene reasons. If you believe you received a defective product, contact us immediately - we'll
+                    make it right.</p>
+
                 <h3>Refund Method</h3>
-                <p>Refunds are issued to the original payment method. Credit card refunds typically appear within 5–10 business days. PayPal and other payment methods may vary.</p>
+                <p>Refunds are issued to the original payment method. Credit card refunds typically appear within 5–10
+                    business days. PayPal and other payment methods may vary.</p>
 
                 <h2>Quality Guarantee</h2>
-                <p>Every KIVI hat is inspected before shipping. If you receive a hat with a manufacturing defect, we'll replace it free of charge. This includes issues with stitching, felting, shape, or material quality.</p>
-                <p>Normal wear and tear from regular sauna use is expected. Our quality guarantee covers manufacturing defects, not damage from improper care or use.</p>
+                <p>Every KIVI hat is inspected before shipping. If you receive a hat with a manufacturing defect, we'll
+                    replace it free of charge. This includes issues with stitching, felting, shape, or material quality.
+                </p>
+                <p>Normal wear and tear from regular sauna use is expected. Our quality guarantee covers manufacturing
+                    defects, not damage from improper care or use.</p>
 
                 <h2>Lost or Damaged Shipments</h2>
-                <p>If your package is lost or damaged during shipping, contact us within 48 hours of expected delivery. We'll file a claim with the carrier and send a replacement at no cost to you.</p>
+                <p>If your package is lost or damaged during shipping, contact us within 48 hours of expected delivery.
+                    We'll file a claim with the carrier and send a replacement at no cost to you.</p>
 
                 <h2>Contact Us</h2>
-                <p>For questions about shipping, returns, or your order status, email us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c6aea3aaaaa986adafb0afaea7b2b5e8a5a9ab">[email&#160;protected]</a>. We respond within 24 hours.</p>
+                <p>For questions about shipping, returns, or your order status, email us at <a
+                        href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                        data-cfemail="c6aea3aaaaa986adafb0afaea7b2b5e8a5a9ab">[email&#160;protected]</a>. We respond
+                    within 24 hours.</p>
             </div>
         </section>
     </div>
@@ -2144,10 +2283,11 @@
                 <p class="last-updated">Last updated: February 2026</p>
 
                 <h2>Our Commitment</h2>
-                <p>KIVI respects your privacy. We collect only the information necessary to process orders and improve your experience. We never sell your data to third parties.</p>
+                <p>KIVI respects your privacy. We collect only the information necessary to process orders and improve
+                    your experience. We never sell your data to third parties.</p>
 
                 <h2>Information We Collect</h2>
-                
+
                 <h3>Information You Provide</h3>
                 <p>When you place an order, we collect:</p>
                 <ul>
@@ -2156,8 +2296,9 @@
                     <li>Phone number (optional)</li>
                     <li>Payment information (processed securely through our payment provider)</li>
                 </ul>
-                <p>When you contact us, we collect the information in your message and any details you choose to share.</p>
-                
+                <p>When you contact us, we collect the information in your message and any details you choose to share.
+                </p>
+
                 <h3>Information Collected Automatically</h3>
                 <p>When you visit our website, we automatically collect:</p>
                 <ul>
@@ -2181,20 +2322,27 @@
                 </ul>
 
                 <h2>Payment Processing</h2>
-                <p>We do not store your payment information. All payment details are processed securely through our payment provider (Stripe, PayPal, or similar). These providers comply with PCI DSS standards for secure payment processing.</p>
+                <p>We do not store your payment information. All payment details are processed securely through our
+                    payment provider (Stripe, PayPal, or similar). These providers comply with PCI DSS standards for
+                    secure payment processing.</p>
 
                 <h2>Cookies</h2>
-                <p>We use cookies to improve your browsing experience. Cookies are small text files stored on your device. We use:</p>
+                <p>We use cookies to improve your browsing experience. Cookies are small text files stored on your
+                    device. We use:</p>
                 <ul>
-                    <li><strong>Essential cookies:</strong> Required for site functionality (shopping cart, checkout)</li>
+                    <li><strong>Essential cookies:</strong> Required for site functionality (shopping cart, checkout)
+                    </li>
                     <li><strong>Analytics cookies:</strong> Help us understand site usage (Google Analytics)</li>
                     <li><strong>Marketing cookies:</strong> Used to deliver relevant ads (with your consent)</li>
                 </ul>
                 <p>You can disable cookies in your browser settings, but this may affect site functionality.</p>
 
                 <h2>Email Marketing</h2>
-                <p>If you provide your email for marketing purposes, we'll send occasional updates about products, promotions, and sauna-related content. You can unsubscribe anytime by clicking the link in any email or contacting us directly.</p>
-                <p>We use email service providers (such as Klaviyo or Mailchimp) to manage our mailing list. These providers are contractually obligated to protect your data.</p>
+                <p>If you provide your email for marketing purposes, we'll send occasional updates about products,
+                    promotions, and sauna-related content. You can unsubscribe anytime by clicking the link in any email
+                    or contacting us directly.</p>
+                <p>We use email service providers (such as Klaviyo or Mailchimp) to manage our mailing list. These
+                    providers are contractually obligated to protect your data.</p>
 
                 <h2>Third-Party Services</h2>
                 <p>We share your information with third parties only when necessary:</p>
@@ -2204,17 +2352,20 @@
                     <li><strong>Analytics providers:</strong> To understand site usage (Google Analytics)</li>
                     <li><strong>Email providers:</strong> To send transactional and marketing emails</li>
                 </ul>
-                <p>These partners are bound by confidentiality agreements and may not use your data for their own purposes.</p>
+                <p>These partners are bound by confidentiality agreements and may not use your data for their own
+                    purposes.</p>
 
                 <h2>Data Security</h2>
-                <p>We take reasonable measures to protect your information from unauthorized access, loss, or misuse. This includes:</p>
+                <p>We take reasonable measures to protect your information from unauthorized access, loss, or misuse.
+                    This includes:</p>
                 <ul>
                     <li>SSL encryption for data transmission</li>
                     <li>Secure servers and regular security audits</li>
                     <li>Limited employee access to personal data</li>
                     <li>Regular password updates and access reviews</li>
                 </ul>
-                <p>No method of internet transmission is 100% secure. While we strive to protect your data, we cannot guarantee absolute security.</p>
+                <p>No method of internet transmission is 100% secure. While we strive to protect your data, we cannot
+                    guarantee absolute security.</p>
 
                 <h2>Your Rights</h2>
                 <p>You have the right to:</p>
@@ -2225,22 +2376,32 @@
                     <li>Opt out of marketing emails</li>
                     <li>Object to certain data processing activities</li>
                 </ul>
-                <p>To exercise these rights, contact us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b1d9d4dddddef1dad8c7d8d9d0c5c29fd2dedc">[email&#160;protected]</a>. We'll respond within 30 days.</p>
+                <p>To exercise these rights, contact us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                        data-cfemail="b1d9d4dddddef1dad8c7d8d9d0c5c29fd2dedc">[email&#160;protected]</a>. We'll respond
+                    within 30 days.</p>
 
                 <h2>Data Retention</h2>
-                <p>We retain your personal information for as long as necessary to fulfill orders, comply with legal obligations, and resolve disputes. Order information is typically retained for 7 years for tax and accounting purposes. Marketing data is retained until you unsubscribe.</p>
+                <p>We retain your personal information for as long as necessary to fulfill orders, comply with legal
+                    obligations, and resolve disputes. Order information is typically retained for 7 years for tax and
+                    accounting purposes. Marketing data is retained until you unsubscribe.</p>
 
                 <h2>Children's Privacy</h2>
-                <p>Our website is not intended for children under 13. We do not knowingly collect information from children. If you believe we have collected information from a child, contact us immediately.</p>
+                <p>Our website is not intended for children under 13. We do not knowingly collect information from
+                    children. If you believe we have collected information from a child, contact us immediately.</p>
 
                 <h2>International Users</h2>
-                <p>If you're accessing our site from outside our primary operating country, your information may be transferred and processed in that country. By using our site, you consent to this transfer.</p>
+                <p>If you're accessing our site from outside our primary operating country, your information may be
+                    transferred and processed in that country. By using our site, you consent to this transfer.</p>
 
                 <h2>Changes to This Policy</h2>
-                <p>We may update this privacy policy from time to time. Changes will be posted on this page with an updated date. Continued use of our site after changes constitutes acceptance of the updated policy.</p>
+                <p>We may update this privacy policy from time to time. Changes will be posted on this page with an
+                    updated date. Continued use of our site after changes constitutes acceptance of the updated policy.
+                </p>
 
                 <h2>Contact Us</h2>
-                <p>For questions about this privacy policy or our data practices, contact us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="caa2afa6a6a58aa1a3bca3a2abbeb9e4a9a5a7">[email&#160;protected]</a>.</p>
+                <p>For questions about this privacy policy or our data practices, contact us at <a
+                        href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                        data-cfemail="caa2afa6a6a58aa1a3bca3a2abbeb9e4a9a5a7">[email&#160;protected]</a>.</p>
             </div>
         </section>
     </div>
@@ -2253,33 +2414,53 @@
                 <p class="last-updated">Last updated: February 2026</p>
 
                 <h2>Acceptance of Terms</h2>
-                <p>By accessing and using the KIVI website, you accept and agree to be bound by these Terms of Service. If you do not agree to these terms, do not use this site.</p>
+                <p>By accessing and using the KIVI website, you accept and agree to be bound by these Terms of Service.
+                    If you do not agree to these terms, do not use this site.</p>
 
                 <h2>General Conditions</h2>
-                <p>We reserve the right to refuse service to anyone for any reason at any time. You agree not to reproduce, duplicate, copy, sell, or exploit any portion of this site without our written permission. The headings in this agreement are for convenience only and do not limit the terms.</p>
+                <p>We reserve the right to refuse service to anyone for any reason at any time. You agree not to
+                    reproduce, duplicate, copy, sell, or exploit any portion of this site without our written
+                    permission. The headings in this agreement are for convenience only and do not limit the terms.</p>
 
                 <h2>Products & Services</h2>
-                
+
                 <h3>Product Descriptions</h3>
-                <p>We strive to display products as accurately as possible. However, we do not guarantee that product descriptions, colors, or other content on this site are accurate, complete, or error-free. All products are subject to availability. We reserve the right to discontinue any product at any time.</p>
-                
+                <p>We strive to display products as accurately as possible. However, we do not guarantee that product
+                    descriptions, colors, or other content on this site are accurate, complete, or error-free. All
+                    products are subject to availability. We reserve the right to discontinue any product at any time.
+                </p>
+
                 <h3>Pricing</h3>
-                <p>Prices are subject to change without notice. We reserve the right to modify or discontinue products or promotions without notice. Pricing errors: If a product is listed at an incorrect price, we may cancel or refuse orders placed for that product.</p>
-                
+                <p>Prices are subject to change without notice. We reserve the right to modify or discontinue products
+                    or promotions without notice. Pricing errors: If a product is listed at an incorrect price, we may
+                    cancel or refuse orders placed for that product.</p>
+
                 <h3>Product Use</h3>
-                <p>KIVI sauna hats are designed for use in sauna environments. Use of the product in any manner not consistent with its intended purpose is at your own risk. We are not liable for misuse, damage, or injury resulting from improper use.</p>
+                <p>KIVI sauna hats are designed for use in sauna environments. Use of the product in any manner not
+                    consistent with its intended purpose is at your own risk. We are not liable for misuse, damage, or
+                    injury resulting from improper use.</p>
 
                 <h2>Orders & Payment</h2>
-                <p>By placing an order, you agree to provide accurate and complete information. We reserve the right to refuse or cancel orders for any reason, including suspected fraud, errors in pricing or product information, or unavailability. Payment must be received before orders are processed. We accept major credit cards, PayPal, and other payment methods displayed at checkout.</p>
+                <p>By placing an order, you agree to provide accurate and complete information. We reserve the right to
+                    refuse or cancel orders for any reason, including suspected fraud, errors in pricing or product
+                    information, or unavailability. Payment must be received before orders are processed. We accept
+                    major credit cards, PayPal, and other payment methods displayed at checkout.</p>
 
                 <h2>Shipping & Delivery</h2>
-                <p>Shipping times are estimates and not guaranteed. We are not responsible for delays caused by carriers, customs, or events beyond our control. Risk of loss passes to you upon delivery to the carrier. See our Shipping & Returns page for full details.</p>
+                <p>Shipping times are estimates and not guaranteed. We are not responsible for delays caused by
+                    carriers, customs, or events beyond our control. Risk of loss passes to you upon delivery to the
+                    carrier. See our Shipping & Returns page for full details.</p>
 
                 <h2>Returns & Refunds</h2>
-                <p>Returns are accepted within 30 days of delivery for unworn, unused items. See our Shipping & Returns page for full policy details. Refunds are issued to the original payment method. We reserve the right to refuse returns that do not meet our policy requirements.</p>
+                <p>Returns are accepted within 30 days of delivery for unworn, unused items. See our Shipping & Returns
+                    page for full policy details. Refunds are issued to the original payment method. We reserve the
+                    right to refuse returns that do not meet our policy requirements.</p>
 
                 <h2>Intellectual Property</h2>
-                <p>All content on this site, including text, graphics, logos, images, and software, is the property of KIVI or its content suppliers and is protected by copyright and intellectual property laws. You may not reproduce, distribute, or create derivative works from any content without written permission.</p>
+                <p>All content on this site, including text, graphics, logos, images, and software, is the property of
+                    KIVI or its content suppliers and is protected by copyright and intellectual property laws. You may
+                    not reproduce, distribute, or create derivative works from any content without written permission.
+                </p>
 
                 <h2>User Conduct</h2>
                 <p>You agree not to:</p>
@@ -2292,35 +2473,56 @@
                 </ul>
 
                 <h2>Limitation of Liability</h2>
-                <p>KIVI and its officers, directors, employees, and agents are not liable for any indirect, incidental, special, or consequential damages arising from your use of this site or products purchased through it. Our total liability for any claim related to this site or our products is limited to the amount you paid for the product in question.</p>
-                <p>Some jurisdictions do not allow limitations on implied warranties or exclusion of certain damages. In such jurisdictions, our liability is limited to the extent permitted by law.</p>
+                <p>KIVI and its officers, directors, employees, and agents are not liable for any indirect, incidental,
+                    special, or consequential damages arising from your use of this site or products purchased through
+                    it. Our total liability for any claim related to this site or our products is limited to the amount
+                    you paid for the product in question.</p>
+                <p>Some jurisdictions do not allow limitations on implied warranties or exclusion of certain damages. In
+                    such jurisdictions, our liability is limited to the extent permitted by law.</p>
 
                 <h2>Indemnification</h2>
-                <p>You agree to indemnify and hold KIVI harmless from any claims, damages, losses, or expenses (including legal fees) arising from your use of this site, violation of these terms, or infringement of any third-party rights.</p>
+                <p>You agree to indemnify and hold KIVI harmless from any claims, damages, losses, or expenses
+                    (including legal fees) arising from your use of this site, violation of these terms, or infringement
+                    of any third-party rights.</p>
 
                 <h2>Product Warranty</h2>
-                <p>KIVI products are covered by a limited warranty against manufacturing defects. This warranty does not cover damage from misuse, improper care, or normal wear and tear. See our Care Guide for proper maintenance instructions.</p>
+                <p>KIVI products are covered by a limited warranty against manufacturing defects. This warranty does not
+                    cover damage from misuse, improper care, or normal wear and tear. See our Care Guide for proper
+                    maintenance instructions.</p>
 
                 <h2>Disclaimers</h2>
-                <p>This site and all products are provided "as is" without warranties of any kind, express or implied. We do not warrant that this site will be uninterrupted, secure, or error-free. We make no claims about the health benefits of sauna use. Consult a healthcare provider before beginning any new wellness practice.</p>
+                <p>This site and all products are provided "as is" without warranties of any kind, express or implied.
+                    We do not warrant that this site will be uninterrupted, secure, or error-free. We make no claims
+                    about the health benefits of sauna use. Consult a healthcare provider before beginning any new
+                    wellness practice.</p>
 
                 <h2>Modifications to Service</h2>
-                <p>We reserve the right to modify or discontinue this site or any part of it at any time without notice. We are not liable for any modification, suspension, or discontinuation of the site.</p>
+                <p>We reserve the right to modify or discontinue this site or any part of it at any time without notice.
+                    We are not liable for any modification, suspension, or discontinuation of the site.</p>
 
                 <h2>Governing Law</h2>
-                <p>These Terms of Service are governed by the laws of the jurisdiction in which KIVI operates, without regard to conflict of law provisions. You agree to submit to the exclusive jurisdiction of courts in that location.</p>
+                <p>These Terms of Service are governed by the laws of the jurisdiction in which KIVI operates, without
+                    regard to conflict of law provisions. You agree to submit to the exclusive jurisdiction of courts in
+                    that location.</p>
 
                 <h2>Dispute Resolution</h2>
-                <p>Any disputes arising from these terms or your use of this site will be resolved through binding arbitration, except where prohibited by law. You waive any right to participate in class-action lawsuits or class-wide arbitration.</p>
+                <p>Any disputes arising from these terms or your use of this site will be resolved through binding
+                    arbitration, except where prohibited by law. You waive any right to participate in class-action
+                    lawsuits or class-wide arbitration.</p>
 
                 <h2>Severability</h2>
-                <p>If any provision of these terms is found to be invalid or unenforceable, that provision will be limited or eliminated to the minimum extent necessary, and the remaining provisions will remain in full effect.</p>
+                <p>If any provision of these terms is found to be invalid or unenforceable, that provision will be
+                    limited or eliminated to the minimum extent necessary, and the remaining provisions will remain in
+                    full effect.</p>
 
                 <h2>Changes to Terms</h2>
-                <p>We may update these Terms of Service at any time. Changes will be posted on this page with an updated date. Continued use of the site after changes constitutes acceptance of the updated terms.</p>
+                <p>We may update these Terms of Service at any time. Changes will be posted on this page with an updated
+                    date. Continued use of the site after changes constitutes acceptance of the updated terms.</p>
 
                 <h2>Contact Information</h2>
-                <p>For questions about these Terms of Service, contact us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b9d1dcd5d5d6f9d2d0cfd0d1d8cdca97dad6d4">[email&#160;protected]</a>.</p>
+                <p>For questions about these Terms of Service, contact us at <a href="/cdn-cgi/l/email-protection"
+                        class="__cf_email__"
+                        data-cfemail="b9d1dcd5d5d6f9d2d0cfd0d1d8cdca97dad6d4">[email&#160;protected]</a>.</p>
             </div>
         </section>
     </div>
@@ -2334,7 +2536,7 @@
                         <li><a onclick="showPage('product')">Sauna Hats</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-column">
                     <h4>Learn</h4>
                     <ul class="footer-links">
@@ -2344,7 +2546,7 @@
                         <li><a onclick="showPage('faq')">FAQ</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-column">
                     <h4>Support</h4>
                     <ul class="footer-links">
@@ -2355,7 +2557,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="newsletter">
                 <h4>Join the sauna ritual.</h4>
                 <form class="newsletter-form" onsubmit="return false;">
@@ -2363,17 +2565,19 @@
                     <button type="submit" class="newsletter-btn">Subscribe</button>
                 </form>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>© 2026 KIVI. Made for ritual.</p>
                 <div class="social-links">
-                    <a href="https://www.instagram.com/mykivi.co" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+                    <a href="https://www.instagram.com/mykivi.co" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram">Instagram</a>
                 </div>
             </div>
         </div>
     </footer>
     <!-- FIXED: Load JavaScript files with defer -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="cart.js" defer></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="cart.js" defer></script>
     <script src="product.js" defer></script>
     <script src="checkout.js" defer></script>
 
@@ -2384,28 +2588,42 @@
             document.querySelectorAll('.page').forEach(page => {
                 page.classList.remove('active');
             });
-            
+
             // Show selected page
             const targetPage = document.getElementById(pageId);
             if (targetPage) {
                 targetPage.classList.add('active');
             }
-            
+
             // Scroll to top
             window.scrollTo(0, 0);
-            
+
             // Close mobile menu
             const navLinks = document.getElementById('navLinks');
             if (navLinks) {
                 navLinks.classList.remove('active');
             }
-            
+
+            // CRITICAL FIX: Reset product page UI when navigating to it
+            if (pageId === 'product') {
+                // Wait for DOM to be ready
+                setTimeout(function () {
+                    if (typeof resetProductPageUI === 'function') {
+                        resetProductPageUI();
+                    }
+                    // Re-initialize to ensure event listeners are attached
+                    if (typeof initProductPage === 'function') {
+                        initProductPage();
+                    }
+                }, 0);
+            }
+
             // Initialize checkout page if needed
             if (pageId === 'checkout' && typeof onCheckoutPageShow === 'function') {
                 onCheckoutPageShow();
             }
         }
-        
+
         // Mobile Menu Toggle
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
@@ -2413,34 +2631,35 @@
                 navLinks.classList.toggle('active');
             }
         }
-        
+
         // Accordion Toggle
         function toggleAccordion(header) {
             const item = header.parentElement;
             const wasActive = item.classList.contains('active');
-            
+
             // Close all accordions in the same section
             const accordion = item.parentElement;
             accordion.querySelectorAll('.accordion-item').forEach(i => {
                 i.classList.remove('active');
             });
-            
+
             // Toggle current item
             if (!wasActive) {
                 item.classList.add('active');
             }
         }
-        
+
         // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
+        document.addEventListener('click', function (event) {
             const nav = document.querySelector('nav');
             const menuBtn = document.querySelector('.mobile-menu-btn');
             const navLinks = document.getElementById('navLinks');
-            
+
             if (!nav.contains(event.target) && navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
             }
         });
     </script>
 </body>
+
 </html>

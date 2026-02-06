@@ -28,6 +28,16 @@
             box-sizing: border-box;
         }
         
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        
+        html {
+            overflow-x: hidden;
+        }
+        
         body {
             font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--charcoal);
@@ -36,6 +46,9 @@
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
         }
         
         h1, h2, h3, h4, h5, h6 {
@@ -105,17 +118,44 @@
             font-size: 28px;
             font-weight: 600;
             letter-spacing: 0.05em;
+            cursor: pointer;
         }
         
         .nav-links {
             display: flex;
             gap: 32px;
             list-style: none;
+            align-items: center;
         }
         
         .nav-links a {
             font-size: 15px;
             font-weight: 500;
+            cursor: pointer;
+        }
+        
+        /* CRITICAL FIX: Cart icon and badge styles */
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        
+        .cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--earth);
+            color: var(--warm-white);
+            font-size: 11px;
+            font-weight: 600;
+            min-width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 2px;
         }
         
         @media (max-width: 767px) {
@@ -214,6 +254,7 @@
             color: var(--ash);
             margin-top: 16px;
             display: inline-block;
+            cursor: pointer;
         }
         
         .text-link:hover {
@@ -247,6 +288,7 @@
             border: 1px solid var(--ash);
             aspect-ratio: 3/2;
             background: linear-gradient(135deg, #4a4a4a 0%, #3a3a3a 100%);
+            max-width: 100%;
         }
         
         /* Product Introduction */
@@ -261,7 +303,7 @@
             align-items: center;
         }
         
-        @media (min-width: 768px) {
+        @media (min-width: 1024px) {
             .product-grid {
                 grid-template-columns: 1fr 1fr;
             }
@@ -276,6 +318,7 @@
             align-items: center;
             justify-content: center;
             background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            max-width: 100%;
         }
         
         .product-image-placeholder {
@@ -449,33 +492,59 @@
         /* Product Page */
         .product-page {
             padding-top: 80px;
+            padding-bottom: 80px;
+            overflow-x: hidden;
         }
         
-        .product-hero-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 48px;
+        .product-page .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 16px;
         }
         
         @media (min-width: 768px) {
+            .product-page .container {
+                padding: 0 32px;
+            }
+        }
+        
+        .product-hero-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 0;
+        }
+        
+        @media (min-width: 1024px) {
             .product-hero-grid {
+                display: grid;
                 grid-template-columns: 1.5fr 1fr;
+                gap: 48px;
+                align-items: start;
             }
         }
         
         .product-gallery {
-            display: grid;
+            display: flex;
+            flex-direction: column;
             gap: 16px;
+            width: 100%;
+            max-width: 100%;
         }
         
         .gallery-main {
+            width: 100%;
+            max-width: 100%;
             aspect-ratio: 1;
             background: var(--stone-grey);
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 100px;
+            font-size: clamp(60px, 10vw, 100px);
             color: var(--ash);
         }
         
@@ -483,9 +552,12 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 8px;
+            width: 100%;
+            max-width: 100%;
         }
         
         .thumb {
+            width: 100%;
             aspect-ratio: 1;
             background: var(--stone-grey);
             border-radius: 4px;
@@ -495,6 +567,11 @@
         
         .thumb:hover {
             opacity: 0.7;
+        }
+        
+        .product-info {
+            width: 100%;
+            max-width: 100%;
         }
         
         .product-info h1 {
@@ -518,6 +595,7 @@
             align-items: center;
             gap: 16px;
             margin-bottom: 24px;
+            flex-wrap: wrap;
         }
         
         .quantity-controls {
@@ -553,12 +631,19 @@
         
         .trust-indicators {
             display: flex;
-            justify-content: center;
-            gap: 24px;
+            justify-content: flex-start;
+            gap: 16px;
             font-size: 14px;
             color: var(--smoke);
             margin-bottom: 32px;
             flex-wrap: wrap;
+        }
+        
+        @media (min-width: 768px) {
+            .trust-indicators {
+                justify-content: center;
+                gap: 24px;
+            }
         }
         
         .trust-indicator {
@@ -567,13 +652,147 @@
             gap: 8px;
         }
         
+        /* CRITICAL FIX: Checkout Page Styles */
+        .checkout-page {
+            padding-top: 80px;
+            min-height: 60vh;
+        }
+        
+        .checkout-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            max-width: 100%;
+        }
+        
+        @media (min-width: 768px) {
+            .checkout-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .checkout-grid {
+                grid-template-columns: 1.5fr 1fr;
+                gap: 48px;
+            }
+        }
+        
+        .checkout-section h2 {
+            margin-bottom: 24px;
+        }
+        
+        .checkout-item {
+            display: grid;
+            grid-template-columns: 60px 1fr auto auto;
+            gap: 16px;
+            align-items: center;
+            padding: 16px;
+            background: var(--stone-grey);
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+        
+        .checkout-item-image {
+            font-size: 32px;
+            text-align: center;
+        }
+        
+        .checkout-item-details h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .checkout-item-quantity {
+            display: flex;
+            border: 1px solid var(--ash);
+            border-radius: 4px;
+            overflow: hidden;
+            width: fit-content;
+        }
+        
+        .qty-btn {
+            padding: 4px 12px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: var(--charcoal);
+        }
+        
+        .qty-btn:hover {
+            background: var(--warm-white);
+        }
+        
+        .qty-value {
+            padding: 4px 16px;
+            border-left: 1px solid var(--ash);
+            border-right: 1px solid var(--ash);
+        }
+        
+        .checkout-item-price {
+            font-weight: 500;
+            font-size: 16px;
+        }
+        
+        .checkout-item-remove {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: var(--smoke);
+            padding: 4px 8px;
+        }
+        
+        .checkout-item-remove:hover {
+            color: var(--charcoal);
+        }
+        
+        .checkout-summary {
+            background: var(--stone-grey);
+            padding: 32px;
+            border-radius: 8px;
+            height: fit-content;
+        }
+        
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+        
+        .summary-row.total {
+            font-size: 18px;
+            font-weight: 600;
+            padding-top: 16px;
+            border-top: 1px solid var(--ash);
+            margin-top: 16px;
+        }
+        
+        .empty-cart {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .empty-cart p {
+            font-size: 18px;
+            color: var(--smoke);
+            margin-bottom: 24px;
+        }
+        
         /* Accordion */
         .accordion {
             border-top: 1px solid var(--ash);
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
         }
         
         .accordion-item {
             border-bottom: 1px solid var(--ash);
+            width: 100%;
         }
         
         .accordion-header {
@@ -584,6 +803,7 @@
             align-items: center;
             font-weight: 500;
             font-size: 16px;
+            width: 100%;
         }
         
         .accordion-header:hover {
@@ -592,6 +812,7 @@
         
         .accordion-icon {
             transition: transform 200ms;
+            flex-shrink: 0;
         }
         
         .accordion-item.active .accordion-icon {
@@ -602,16 +823,21 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 300ms ease;
+            width: 100%;
         }
         
         .accordion-item.active .accordion-content {
-            max-height: 1000px;
+            max-height: 2000px;
         }
         
         .accordion-body {
             padding-bottom: 24px;
             color: var(--smoke);
             line-height: 1.7;
+            width: 100%;
+            max-width: 100%;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
         }
         
         .accordion-body h4 {
@@ -637,6 +863,32 @@
         /* FAQ Section */
         .faq-section {
             background: var(--stone-grey);
+            position: relative;
+            z-index: 1;
+            clear: both;
+            margin-top: 0;
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        
+        @media (min-width: 768px) {
+            .faq-section {
+                padding-top: 120px;
+                padding-bottom: 120px;
+            }
+        }
+        
+        .faq-section .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        
+        @media (min-width: 768px) {
+            .faq-section .container {
+                padding: 0 32px;
+            }
         }
         
         .faq-section h2 {
@@ -684,6 +936,7 @@
             aspect-ratio: 4/3;
             background: linear-gradient(135deg, #4a4a4a 0%, #3a3a3a 100%);
             border-radius: 8px;
+            max-width: 100%;
         }
         
         .philosophy-content h2 {
@@ -748,6 +1001,7 @@
             justify-content: center;
             color: var(--ash);
             font-size: 14px;
+            max-width: 100%;
         }
         
         .solution-content h2 {
@@ -961,6 +1215,7 @@
         .footer-links a {
             font-size: 14px;
             color: var(--ash);
+            cursor: pointer;
         }
         
         .footer-links a:hover {
@@ -1093,16 +1348,23 @@
     <!-- Header -->
     <header>
         <nav>
-            <a href="#" class="logo" onclick="showPage('home')">KIVI</a>
+            <a class="logo" onclick="showPage('home')">KIVI</a>
             <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#" onclick="showPage('home')">Home</a></li>
-                <li><a href="#" onclick="showPage('product')">Shop</a></li>
-                <li><a href="#" onclick="showPage('about')">About</a></li>
-                <li><a href="#" onclick="showPage('how-it-works')">How It Works</a></li>
-                <li><a href="#" onclick="showPage('care-guide')">Care Guide</a></li>
-                <li><a href="#" onclick="showPage('faq')">FAQ</a></li>
-                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                <li><a onclick="showPage('home')">Home</a></li>
+                <li><a onclick="showPage('product')">Shop</a></li>
+                <li><a onclick="showPage('about')">About</a></li>
+                <li><a onclick="showPage('how-it-works')">How It Works</a></li>
+                <li><a onclick="showPage('care-guide')">Care Guide</a></li>
+                <li><a onclick="showPage('faq')">FAQ</a></li>
+                <li><a onclick="showPage('contact')">Contact</a></li>
+                <!-- CRITICAL FIX: Cart icon with badge -->
+                <li>
+                    <div class="cart-icon" onclick="showPage('checkout')">
+                        🛒
+                        <span class="cart-badge" id="cart-count">0</span>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
@@ -1117,7 +1379,7 @@
                 <div class="hero-cta">
                     <button class="btn btn-primary" onclick="showPage('product')">Shop KIVI</button>
                 </div>
-                <a href="#" class="text-link" onclick="showPage('how-it-works')">Learn why you need one →</a>
+                <a class="text-link" onclick="showPage('how-it-works')">Learn why you need one →</a>
             </div>
         </section>
 
@@ -1206,7 +1468,7 @@
         <section class="testimonial section">
             <div class="container">
                 <p class="testimonial-quote">"I used to leave the sauna after 10 minutes. Now I comfortably sit for 25. The difference is entirely the hat."</p>
-                <p class="testimonial-attribution">— Marcus T., Melbourne</p>
+                <p class="testimonial-attribution"> - Oliver H, Sydney</p>
             </div>
         </section>
 
@@ -1245,13 +1507,13 @@
                         <div class="quantity-selector">
                             <span>Quantity:</span>
                             <div class="quantity-controls">
-                                <button class="quantity-btn">−</button>
-                                <span class="quantity-value">1</span>
-                                <button class="quantity-btn">+</button>
+                                <button class="quantity-btn" id="decrease-qty" onclick="if(document.getElementById('quantity-value').textContent>1){document.getElementById('quantity-value').textContent=parseInt(document.getElementById('quantity-value').textContent)-1}">−</button>
+                                <span class="quantity-value" id="quantity-value">1</span>
+                                <button class="quantity-btn" id="increase-qty" onclick="if(parseInt(document.getElementById('quantity-value').textContent)<99){document.getElementById('quantity-value').textContent=parseInt(document.getElementById('quantity-value').textContent)+1}">+</button>
                             </div>
                         </div>
                         
-                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                        <button class="btn btn-primary add-to-cart" id="add-to-cart-btn" onclick="if(typeof Cart!=='undefined'&&Cart.add){var q=parseInt(document.getElementById('quantity-value').textContent)||1;Cart.add({id:'kivi-sauna-hat',name:'KIVI Sauna Hat',price:7900,quantity:q,image:'🧢'});this.textContent='Added! ✓';this.style.backgroundColor='var(--earth)';this.disabled=true;var btn=this;setTimeout(function(){btn.textContent='Add to Cart';btn.style.backgroundColor='';btn.disabled=false},1500)}">Add to Cart</button>
                         
                         <div class="trust-indicators">
                             <span class="trust-indicator">✓ Free shipping</span>
@@ -1259,7 +1521,7 @@
                             <span class="trust-indicator">✓ Handmade quality</span>
                         </div>
                         
-                        <!-- Accordion -->
+                        <!-- Product Accordions -->
                         <div class="accordion">
                             <div class="accordion-item">
                                 <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -1306,7 +1568,7 @@
                                         <p>One size fits most (56–60cm head circumference). Unisex fit. Stretches slightly with use.</p>
                                         <h4>Care instructions:</h4>
                                         <p>Spot clean with cool water and mild soap. Do not machine wash. Air dry flat, away from direct heat. Do not wring or twist.</p>
-                                        <p><a href="#" onclick="showPage('care-guide')" style="color: var(--earth);">View full care guide →</a></p>
+                                        <p><a onclick="showPage('care-guide')" style="color: var(--earth); cursor: pointer;">View full care guide →</a></p>
                                         <h4>Lifespan:</h4>
                                         <p>With proper care, your KIVI hat will last hundreds of sessions. Wool naturally resists odor and bacteria.</p>
                                     </div>
@@ -1322,7 +1584,7 @@
                                     <div class="accordion-body">
                                         <h4>Shipping:</h4>
                                         <p>Free standard shipping on all orders (5–7 business days). Express shipping available at checkout.</p>
-                                        <p><a href="#" onclick="showPage('shipping-returns')" style="color: var(--earth);">Full shipping & returns policy →</a></p>
+                                        <p><a onclick="showPage('shipping-returns')" style="color: var(--earth); cursor: pointer;">Full shipping & returns policy →</a></p>
                                         <h4>Returns:</h4>
                                         <p>30-day return window. Unworn items only. Free return shipping. Refund issued within 5 business days of receipt.</p>
                                         <h4>Warranty:</h4>
@@ -1393,7 +1655,45 @@
         </section>
     </div>
 
-    <!-- About Page -->
+    <!-- CRITICAL FIX: Checkout Page -->
+    <div id="checkout" class="page">
+        <section class="checkout-page section">
+            <div class="container">
+                <h1 style="margin-bottom: 48px;">Checkout</h1>
+                <div class="checkout-grid">
+                    <div class="checkout-section">
+                        <h2>Your Cart</h2>
+                        <div id="checkout-items"></div>
+                    </div>
+                    <div class="checkout-section">
+                        <div class="checkout-summary">
+                            <h2>Order Summary</h2>
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <span id="checkout-subtotal">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Shipping:</span>
+                                <span id="checkout-shipping">Free</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total:</span>
+                                <span id="checkout-total">$0.00</span>
+                            </div>
+                            <button class="btn btn-primary" id="checkout-button" style="width: 100%; margin-top: 24px;">
+                                Proceed to Payment
+                            </button>
+                            <p style="font-size: 13px; color: var(--smoke); margin-top: 16px; text-align: center;">
+                                Secure checkout powered by Stripe
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- About, FAQ, Contact, etc. - Simplified for length -->
     <div id="about" class="page">
         <section class="about-hero section">
             <div class="container">
@@ -1410,7 +1710,7 @@
                         <h2>Why KIVI exists</h2>
                         <p>The sauna is one of the few remaining rituals of discomfort in modern life. It demands patience. It rewards persistence.</p>
                         <p>Most sauna accessories treat heat exposure like a trend to capitalize on. We don't.</p>
-                        <p>KIVI was built for people who take sauna seriously. Who understand that comfort in heat isn't about luxury—it's about preparation. Who know that the head overheats first and limits everything that follows.</p>
+                        <p>KIVI was built for people who take sauna seriously. Who understand that comfort in heat isn't about luxury - it's about preparation. Who know that the head overheats first and limits everything that follows.</p>
                         <p>We make one product. We make it well. We don't expand until we've perfected what we have.</p>
                     </div>
                 </div>
@@ -1448,7 +1748,7 @@
         <section class="problem-section section">
             <div class="container">
                 <p>Your head dissipates up to 40% of your body's heat. In normal environments, this keeps you cool. In a sauna, it works against you.</p>
-                <p>Because heat rises, your head is exposed to the highest temperatures in the room. Without protection, your scalp, ears, and brain overheat rapidly—long before your body reaches its limit.</p>
+                <p>Because heat rises, your head is exposed to the highest temperatures in the room. Without protection, your scalp, ears, and brain overheat rapidly - long before your body reaches its limit.</p>
                 <p>This is why most people leave the sauna feeling like they "couldn't take it anymore." It's not your body. It's your head.</p>
             </div>
         </section>
@@ -1505,7 +1805,7 @@
     <div id="care-guide" class="page">
         <section class="legal-page section">
             <div class="container">
-                <h1>Care Guide</h1>
+                <h1 style="text-align: center;">Care Guide</h1>
                 <div class="care-guide-intro">
                     <p>Your KIVI sauna hat is built to last hundreds of sessions. Proper care ensures it performs at its best for years to come.</p>
                 </div>
@@ -1526,10 +1826,10 @@
                     <p>Wool naturally resists odor and bacteria. Most users never need to wash their hat. Occasional spot cleaning is sufficient for long-term use.</p>
                     
                     <h3>Spot Cleaning</h3>
-                    <p>Use cool water and a small amount of mild, wool-safe soap. Gently dab the affected area—never rub aggressively. Rinse with cool water. Press (don't wring) to remove excess water. Air dry flat on a clean towel, away from direct heat or sunlight.</p>
+                    <p>Use cool water and a small amount of mild, wool-safe soap. Gently dab the affected area"”never rub aggressively. Rinse with cool water. Press (don't wring) to remove excess water. Air dry flat on a clean towel, away from direct heat or sunlight.</p>
                     
                     <h3>Deep Cleaning (Rarely Needed)</h3>
-                    <p>Fill a basin with cool water and a small amount of wool wash or gentle detergent. Submerge the hat and gently agitate for 1–2 minutes. Let it soak for 10 minutes maximum. Rinse thoroughly with cool water until soap is completely removed. Press gently to remove water—never twist or wring. Reshape while damp. Lay flat on a clean, dry towel. Allow to air dry completely (24–48 hours). Never use a dryer, radiator, or direct heat source.</p>
+                    <p>Fill a basin with cool water and a small amount of wool wash or gentle detergent. Submerge the hat and gently agitate for 1–2 minutes. Let it soak for 10 minutes maximum. Rinse thoroughly with cool water until soap is completely removed. Press gently to remove water"”never twist or wring. Reshape while damp. Lay flat on a clean, dry towel. Allow to air dry completely (24–48 hours). Never use a dryer, radiator, or direct heat source.</p>
                 </div>
 
                 <div class="care-do-dont">
@@ -1565,7 +1865,7 @@
                     <h2>Longevity & Maintenance</h2>
                     
                     <h3>Normal Wear</h3>
-                    <p>Some pilling is natural with wool products. Gently remove pills with a fabric shaver or sweater comb. Do not pull pills by hand—this can damage fibers. Slight stretching over time is normal. Reshape while damp if needed.</p>
+                    <p>Some pilling is natural with wool products. Gently remove pills with a fabric shaver or sweater comb. Do not pull pills by hand"”this can damage fibers. Slight stretching over time is normal. Reshape while damp if needed.</p>
                     
                     <h3>Expected Lifespan</h3>
                     <p>With proper care, your KIVI hat will last 200–500 sessions. Heavy use (daily sessions) may show wear after 1–2 years. Occasional use (weekly sessions) can last 5+ years.</p>
@@ -1599,7 +1899,7 @@
 
                 <div style="text-align: center; margin-top: 64px;">
                     <p style="color: var(--smoke);">Still have questions about care?</p>
-                    <a href="#" onclick="showPage('contact')" class="btn btn-secondary" style="margin-top: 16px;">Contact Us</a>
+                    <a onclick="showPage('contact')" class="btn btn-secondary" style="margin-top: 16px; cursor: pointer;">Contact Us</a>
                 </div>
             </div>
         </section>
@@ -1710,7 +2010,7 @@
                         </div>
                         <div class="accordion-content">
                             <div class="accordion-body">
-                                <p>Spot clean with cool water and mild soap. Air dry flat. Do not machine wash or tumble dry. <a href="#" onclick="showPage('care-guide')" style="color: var(--earth);">View full care guide →</a></p>
+                                <p>Spot clean with cool water and mild soap. Air dry flat. Do not machine wash or tumble dry. <a onclick="showPage('care-guide')" style="color: var(--earth); cursor: pointer;">View full care guide →</a></p>
                             </div>
                         </div>
                     </div>
@@ -1749,10 +2049,29 @@
                         </div>
                         <div class="accordion-content">
                             <div class="accordion-body">
-                                <p>30-day returns on unworn items. Full refund processed within 5 business days of receipt. <a href="#" onclick="showPage('shipping-returns')" style="color: var(--earth);">Full policy →</a></p>
+                                <p>30-day returns on unworn items. Full refund processed within 5 business days of receipt. <a onclick="showPage('shipping-returns')" style="color: var(--earth); cursor: pointer;">Full policy →</a></p>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <section class="contact-page section">
+            <div class="container">
+                <h1>Get in touch.</h1>
+                <p>For questions about orders, products, or anything else, email us at:</p>
+                <a href="mailto:hello@mykivi.co" class="contact-email">hello@mykivi.co</a>
+                <p>We respond within 24 hours (usually faster).</p>
+                
+                <div class="contact-divider"></div>
+                
+                <div class="contact-hours">
+                    <p><strong>Support hours:</strong><br>Monday-Friday, 9am-5pm AEST</p>
+                    <p style="margin-top: 24px;">For order tracking, check your email confirmation for a tracking link.</p>
                 </div>
             </div>
         </section>
@@ -1779,7 +2098,7 @@
                 <strong>Customs:</strong> International orders may be subject to customs fees, duties, and taxes. These are the responsibility of the customer.</p>
                 
                 <h3>Order Tracking</h3>
-                <p>Once your order ships, you'll receive a confirmation email with a tracking number. You can track your package through the carrier's website. If you don't receive tracking information within 48 hours of order placement, contact us at hello@kivihats.com.</p>
+                <p>Once your order ships, you'll receive a confirmation email with a tracking number. You can track your package through the carrier's website. If you don't receive tracking information within 48 hours of order placement, contact us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a1c9c4cdcdcee1cac8d7c8c9c0d5d28fc2cecc">[email&#160;protected]</a>.</p>
                 
                 <h3>Shipping Restrictions</h3>
                 <p>We cannot ship to P.O. boxes or military addresses at this time. If you have specific delivery requirements, contact us before placing your order.</p>
@@ -1790,7 +2109,7 @@
                 <p>We accept returns within 30 days of delivery. The hat must be unworn, unused, and in its original condition.</p>
                 
                 <h3>Return Process</h3>
-                <p>To initiate a return, email us at hello@kivihats.com with your order number and reason for return. We'll send you a prepaid return label within 24 hours. Pack the hat securely in its original packaging (if available). Attach the return label and drop off at the carrier location. Once we receive and inspect your return, we'll process your refund within 5 business days.</p>
+                <p>To initiate a return, email us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="eb838e878784ab80829d82838a9f98c5888486">[email&#160;protected]</a> with your order number and reason for return. We'll send you a prepaid return label within 24 hours. Pack the hat securely in its original packaging (if available). Attach the return label and drop off at the carrier location. Once we receive and inspect your return, we'll process your refund within 5 business days.</p>
                 
                 <h3>Return Shipping</h3>
                 <p>Return shipping is free for domestic orders. For international returns, customers are responsible for return shipping costs unless the product is defective.</p>
@@ -1799,7 +2118,7 @@
                 <p>We currently offer a one-size-fits-most design. If your hat doesn't fit, we'll provide a full refund. For defects or quality issues, we'll send a replacement at no cost.</p>
                 
                 <h3>Non-Returnable Items</h3>
-                <p>We cannot accept returns on hats that have been worn in a sauna or show signs of use. This is for hygiene reasons. If you believe you received a defective product, contact us immediately—we'll make it right.</p>
+                <p>We cannot accept returns on hats that have been worn in a sauna or show signs of use. This is for hygiene reasons. If you believe you received a defective product, contact us immediately"”we'll make it right.</p>
                 
                 <h3>Refund Method</h3>
                 <p>Refunds are issued to the original payment method. Credit card refunds typically appear within 5–10 business days. PayPal and other payment methods may vary.</p>
@@ -1812,7 +2131,7 @@
                 <p>If your package is lost or damaged during shipping, contact us within 48 hours of expected delivery. We'll file a claim with the carrier and send a replacement at no cost to you.</p>
 
                 <h2>Contact Us</h2>
-                <p>For questions about shipping, returns, or your order status, email us at hello@kivihats.com. We respond within 24 hours.</p>
+                <p>For questions about shipping, returns, or your order status, email us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c6aea3aaaaa986adafb0afaea7b2b5e8a5a9ab">[email&#160;protected]</a>. We respond within 24 hours.</p>
             </div>
         </section>
     </div>
@@ -1906,7 +2225,7 @@
                     <li>Opt out of marketing emails</li>
                     <li>Object to certain data processing activities</li>
                 </ul>
-                <p>To exercise these rights, contact us at hello@kivihats.com. We'll respond within 30 days.</p>
+                <p>To exercise these rights, contact us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b1d9d4dddddef1dad8c7d8d9d0c5c29fd2dedc">[email&#160;protected]</a>. We'll respond within 30 days.</p>
 
                 <h2>Data Retention</h2>
                 <p>We retain your personal information for as long as necessary to fulfill orders, comply with legal obligations, and resolve disputes. Order information is typically retained for 7 years for tax and accounting purposes. Marketing data is retained until you unsubscribe.</p>
@@ -1921,7 +2240,7 @@
                 <p>We may update this privacy policy from time to time. Changes will be posted on this page with an updated date. Continued use of our site after changes constitutes acceptance of the updated policy.</p>
 
                 <h2>Contact Us</h2>
-                <p>For questions about this privacy policy or our data practices, contact us at hello@kivihats.com.</p>
+                <p>For questions about this privacy policy or our data practices, contact us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="caa2afa6a6a58aa1a3bca3a2abbeb9e4a9a5a7">[email&#160;protected]</a>.</p>
             </div>
         </section>
     </div>
@@ -2001,30 +2320,10 @@
                 <p>We may update these Terms of Service at any time. Changes will be posted on this page with an updated date. Continued use of the site after changes constitutes acceptance of the updated terms.</p>
 
                 <h2>Contact Information</h2>
-                <p>For questions about these Terms of Service, contact us at hello@kivihats.com.</p>
+                <p>For questions about these Terms of Service, contact us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b9d1dcd5d5d6f9d2d0cfd0d1d8cdca97dad6d4">[email&#160;protected]</a>.</p>
             </div>
         </section>
     </div>
-
-    <!-- Contact Page -->
-    <div id="contact" class="page">
-        <section class="contact-page section">
-            <div class="container">
-                <h1>Get in touch.</h1>
-                <p>For questions about orders, products, or anything else, email us at:</p>
-                <a href="mailto:hello@kivihats.com" class="contact-email">hello@kivihats.com</a>
-                <p>We respond within 24 hours (usually faster).</p>
-                
-                <div class="contact-divider"></div>
-                
-                <div class="contact-hours">
-                    <p><strong>Support hours:</strong><br>Monday–Friday, 9am–5pm AEST</p>
-                    <p style="margin-top: 24px;">For order tracking, check your email confirmation for a tracking link.</p>
-                </div>
-            </div>
-        </section>
-    </div>
-
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -2032,27 +2331,27 @@
                 <div class="footer-column">
                     <h4>Shop</h4>
                     <ul class="footer-links">
-                        <li><a href="#" onclick="showPage('product')">Sauna Hats</a></li>
+                        <li><a onclick="showPage('product')">Sauna Hats</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h4>Learn</h4>
                     <ul class="footer-links">
-                        <li><a href="#" onclick="showPage('about')">About KIVI</a></li>
-                        <li><a href="#" onclick="showPage('how-it-works')">How It Works</a></li>
-                        <li><a href="#" onclick="showPage('care-guide')">Care Guide</a></li>
-                        <li><a href="#" onclick="showPage('faq')">FAQ</a></li>
+                        <li><a onclick="showPage('about')">About KIVI</a></li>
+                        <li><a onclick="showPage('how-it-works')">How It Works</a></li>
+                        <li><a onclick="showPage('care-guide')">Care Guide</a></li>
+                        <li><a onclick="showPage('faq')">FAQ</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h4>Support</h4>
                     <ul class="footer-links">
-                        <li><a href="#" onclick="showPage('contact')">Contact</a></li>
-                        <li><a href="#" onclick="showPage('shipping-returns')">Shipping & Returns</a></li>
-                        <li><a href="#" onclick="showPage('privacy-policy')">Privacy Policy</a></li>
-                        <li><a href="#" onclick="showPage('terms-of-service')">Terms of Service</a></li>
+                        <li><a onclick="showPage('contact')">Contact</a></li>
+                        <li><a onclick="showPage('shipping-returns')">Shipping & Returns</a></li>
+                        <li><a onclick="showPage('privacy-policy')">Privacy Policy</a></li>
+                        <li><a onclick="showPage('terms-of-service')">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>
@@ -2073,6 +2372,10 @@
             </div>
         </div>
     </footer>
+    <!-- FIXED: Load JavaScript files with defer -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="cart.js" defer></script>
+    <script src="product.js" defer></script>
+    <script src="checkout.js" defer></script>
 
     <script>
         // Page Navigation
@@ -2083,18 +2386,32 @@
             });
             
             // Show selected page
-            document.getElementById(pageId).classList.add('active');
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
             
             // Scroll to top
             window.scrollTo(0, 0);
             
             // Close mobile menu
-            document.getElementById('navLinks').classList.remove('active');
+            const navLinks = document.getElementById('navLinks');
+            if (navLinks) {
+                navLinks.classList.remove('active');
+            }
+            
+            // Initialize checkout page if needed
+            if (pageId === 'checkout' && typeof onCheckoutPageShow === 'function') {
+                onCheckoutPageShow();
+            }
         }
         
         // Mobile Menu Toggle
         function toggleMenu() {
-            document.getElementById('navLinks').classList.toggle('active');
+            const navLinks = document.getElementById('navLinks');
+            if (navLinks) {
+                navLinks.classList.toggle('active');
+            }
         }
         
         // Accordion Toggle

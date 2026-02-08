@@ -136,11 +136,22 @@
         /* Header */
         header {
             position: sticky;
+            position: -webkit-sticky;
+            /* Safari support */
             top: 0;
             background: var(--warm-white);
             border-bottom: 1px solid var(--ash);
             padding: 16px 0;
             z-index: 1000;
+            width: 100%;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            /* Safari support */
+        }
+
+        /* Optional: Add subtle shadow when scrolling */
+        header.scrolled {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
 
         nav {
@@ -2700,7 +2711,20 @@
                 navLinks.classList.remove('active');
             }
         });
+        // Add shadow to header on scroll
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > 10) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }, { passive: true });
     </script>
+
 </body>
 
 </html>

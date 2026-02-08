@@ -248,8 +248,32 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%);
             overflow: hidden;
+            background: #2a2a2a;
+            /* fallback */
+        }
+
+        .hero-background {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(26, 26, 26, 0.3) 0%, rgba(26, 26, 26, 0.7) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
         }
 
         .hero::before {
@@ -1416,10 +1440,7 @@
     <div id="home" class="page active">
         <!-- Hero Section -->
         <section class="hero">
-            <img src="/images/hero/hero-sauna.jpg" 
-                alt="Finnish sauna interior" 
-                class="hero-background"
-                loading="eager">
+            <img src="/images/hero/hero-sauna.jpg" alt="Finnish sauna interior" class="hero-background" loading="eager">
             <div class="hero-content fade-in-up">
                 <h1>Designed for heat.<br>Made for ritual.</h1>
                 <p class="hero-subheading">100% Australian Merino wool sauna hats for serious heat sessions.</p>
@@ -1450,7 +1471,8 @@
                     </div>
                     <div class="product-details">
                         <h2>The KIVI Sauna Hat</h2>
-                        <p>100% natural Australian Premium Merino Wool. Engineered to regulate head temperature in extreme heat. Worn by
+                        <p>100% natural Australian Premium Merino Wool. Engineered to regulate head temperature in
+                            extreme heat. Worn by
                             sauna athletes, recovery enthusiasts, and anyone who takes heat seriously.</p>
                         <p>Keeps your head 15–20°C cooler than ambient sauna temperature. Protects hair, scalp, and ears
                             from heat damage. Extends comfortable session time by up to 40%. Unisex fit. Minimal design.
@@ -1558,7 +1580,8 @@
                     <div class="product-info">
                         <h1>KIVI Sauna Hat</h1>
                         <p class="product-price-large">$79.00</p>
-                        <p class="product-description">100% natural Australian Premium Merino wool sauna hat. Designed for heat regulation and
+                        <p class="product-description">100% natural Australian Premium Merino wool sauna hat. Designed
+                            for heat regulation and
                             extended sauna sessions.</p>
 
                         <div class="quantity-selector">
@@ -1587,7 +1610,8 @@
                                 </div>
                                 <div class="accordion-content">
                                     <div class="accordion-body">
-                                        <p>100% natural Australian Premium Merino wool sauna hat engineered for serious heat sessions.</p>
+                                        <p>100% natural Australian Premium Merino wool sauna hat engineered for serious
+                                            heat sessions.</p>
                                         <p>KIVI regulates head temperature in extreme sauna environments, allowing you
                                             to stay longer and maximize the benefits of heat exposure.</p>
                                         <h4>What it does:</h4>
@@ -1612,7 +1636,8 @@
                                         <p><strong>Material:</strong> 100% natural Australian Premium Merino wool</p>
                                         <p><strong>Weight:</strong> 180gsm (medium-heavy felted wool)</p>
                                         <p><strong>Construction:</strong> Felted and hand-finished</p>
-                                        <p><strong>Origin:</strong> Ethically sourced and natural Australian Premium Merino wool</p>
+                                        <p><strong>Origin:</strong> Ethically sourced and natural Australian Premium
+                                            Merino wool</p>
                                         <h4>Why merino wool?</h4>
                                         <p>Wool is naturally insulating, moisture-wicking, and heat-resistant. Unlike
                                             synthetic materials, wool regulates temperature without trapping sweat.</p>
@@ -2085,7 +2110,8 @@
                         </div>
                         <div class="accordion-content">
                             <div class="accordion-body">
-                                <p>100% natural Australian Premium Merino wool, felted for durability and heat resistance.</p>
+                                <p>100% natural Australian Premium Merino wool, felted for durability and heat
+                                    resistance.</p>
                             </div>
                         </div>
                     </div>
@@ -2238,7 +2264,8 @@
                 <h3>Order Tracking</h3>
                 <p>Once your order ships, you'll receive a confirmation email with a tracking number. You can track your
                     package through the carrier's website. If you don't receive tracking information within 48 hours of
-                    order placement, contact us at <a href="mailto:hello@mykivi.co" class="contact-email">hello@mykivi.co</a>
+                    order placement, contact us at <a href="mailto:hello@mykivi.co"
+                        class="contact-email">hello@mykivi.co</a>
 
 
                 <h3>Shipping Restrictions</h3>
@@ -2252,9 +2279,10 @@
                     condition.</p>
 
                 <h3>Return Process</h3>
-                <p>To initiate a return, email us at <a href="mailto:hello@mykivi.co" class="contact-email">hello@mykivi.co</a>
-                    with your order number and reason for return. We'll send you a prepaid return label within 24 hours. 
-                    Pack the hat securely in its original packaging (if available). Attach the return label and drop off 
+                <p>To initiate a return, email us at <a href="mailto:hello@mykivi.co"
+                        class="contact-email">hello@mykivi.co</a>
+                    with your order number and reason for return. We'll send you a prepaid return label within 24 hours.
+                    Pack the hat securely in its original packaging (if available). Attach the return label and drop off
                     at the carrier location. Once we receive and inspect your return, we'll process your refund within 5
                     business days.</p>
 
@@ -2287,8 +2315,9 @@
                     We'll file a claim with the carrier and send a replacement at no cost to you.</p>
 
                 <h2>Contact Us</h2>
-                <p>For questions about shipping, returns, or your order status, email us at <a href="mailto:hello@mykivi.co" 
-                    class="contact-email">hello@mykivi.co</a>. We respond within 24 hours.</p>
+                <p>For questions about shipping, returns, or your order status, email us at <a
+                        href="mailto:hello@mykivi.co" class="contact-email">hello@mykivi.co</a>. We respond within 24
+                    hours.</p>
             </div>
         </section>
     </div>

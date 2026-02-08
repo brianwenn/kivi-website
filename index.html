@@ -53,6 +53,8 @@
             overflow-x: hidden;
             width: 100%;
             max-width: 100vw;
+            padding-top: 70px;  /* ADD THIS LINE - accounts for fixed header height */
+
         }
 
         h1,
@@ -135,21 +137,22 @@
 
         /* Header */
         header {
-            position: sticky;
-            position: -webkit-sticky;
-            /* Safari support */
+            position: fixed;
+            /* Changed from sticky to fixed */
             top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
             background: var(--warm-white);
             border-bottom: 1px solid var(--ash);
             padding: 16px 0;
-            z-index: 1000;
-            width: 100%;
+            z-index: 9999;
+            /* Increased z-index */
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            /* Safari support */
         }
 
-        /* Optional: Add subtle shadow when scrolling */
+        /* Add shadow when scrolling */
         header.scrolled {
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }

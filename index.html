@@ -1066,15 +1066,21 @@
         }
 
         .solution-diagram {
-            aspect-ratio: 1;
-            background: var(--stone-grey);
+            width: 100%;
+            background: var(--warm-white);
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--ash);
-            font-size: 14px;
-            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .solution-diagram img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            display: block;
         }
 
         .solution-content h2 {
@@ -1880,8 +1886,7 @@
             <div class="container">
                 <div class="solution-grid">
                     <div class="solution-diagram">
-                        <img src="images/heat-diagram.jpg" alt="Heat regulation diagram showing thermal insulation"
-                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; display: block;">
+                        <img src="images/heat-diagram.jpg" alt="Heat regulation diagram showing thermals in a sauna">
                     </div>
                     <div class="solution-content">
                         <h2>Insulation extends your threshold.</h2>

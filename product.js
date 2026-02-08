@@ -1,6 +1,7 @@
 /**
  * KIVI Product Page Functionality
  * Handles quantity controls and add to cart
+ * FIXED: Single listener attachment, no quantity multiplication
  */
 
 // Product configuration
@@ -22,10 +23,12 @@ let isAddingToCart = false;
 
 /**
  * Initialize product page controls
+ * CRITICAL FIX: Only attach listeners ONCE per page load
  */
 function initProductPage() {
-  // Prevent duplicate listener attachment
+  // CRITICAL: Prevent duplicate listener attachment
   if (listenersAttached) {
+    console.log('Product page already initialized, skipping');
     return;
   }
 
@@ -40,22 +43,28 @@ function initProductPage() {
   }
 
   // Decrease quantity
+  // CRITICAL FIX: Each handler modifies quantity EXACTLY ONCE
   decreaseBtn.addEventListener('click', function(e) {
     e.preventDefault();
     e.stopPropagation();
+    
     if (productQuantity > 1) {
-      productQuantity--;
+      productQuantity = productQuantity - 1;  // Explicit decrement
       quantityDisplay.textContent = productQuantity;
+      console.log('Decreased to:', productQuantity);
     }
   });
 
   // Increase quantity
+  // CRITICAL FIX: Each handler modifies quantity EXACTLY ONCE
   increaseBtn.addEventListener('click', function(e) {
     e.preventDefault();
     e.stopPropagation();
+    
     if (productQuantity < Cart.MAX_QUANTITY) {
-      productQuantity++;
+      productQuantity = productQuantity + 1;  // Explicit increment
       quantityDisplay.textContent = productQuantity;
+      console.log('Increased to:', productQuantity);
     }
   });
 
@@ -66,16 +75,19 @@ function initProductPage() {
     addToCart();
   });
 
-  // Mark listeners as attached
+  // CRITICAL: Mark listeners as attached and NEVER reset this during session
   listenersAttached = true;
+  console.log('Product page initialized, listeners attached');
 }
 
 /**
  * Add current product to cart
+ * CRITICAL FIX: Pass quantity exactly once, no multiplication
  */
 function addToCart() {
   // Prevent double-click
   if (isAddingToCart) {
+    console.log('Already adding to cart, ignoring click');
     return;
   }
   
@@ -88,37 +100,43 @@ function addToCart() {
     return;
   }
 
-  // Create item object
+  // CRITICAL FIX: Create item with EXACT quantity value
   const item = {
     id: KIVI_PRODUCT.id,
     name: KIVI_PRODUCT.name,
     price: KIVI_PRODUCT.price,
-    quantity: productQuantity,
+    quantity: productQuantity,  // Pass exact value, no multiplication
     image: KIVI_PRODUCT.image
   };
+
+  console.log('Adding to cart:', item);
 
   // Add to cart
   Cart.add(item);
   
   // Visual feedback
   const originalText = addToCartBtn.textContent;
-  const originalBg = addToCartBtn.style.backgroundColor;
   
   addToCartBtn.textContent = 'Added! ✓';
   addToCartBtn.style.backgroundColor = 'var(--earth)';
   addToCartBtn.disabled = true;
   
-  // Reset after animation
+  // CRITICAL FIX: Reset button state after delay
   setTimeout(function() {
-    addToCartBtn.textContent = originalText;
-    addToCartBtn.style.backgroundColor = originalBg;
-    addToCartBtn.disabled = false;
+    const btn = document.getElementById('add-to-cart-btn');
+    if (btn) {
+      btn.textContent = 'Add to Cart';
+      btn.style.backgroundColor = '';
+      btn.disabled = false;
+    }
     isAddingToCart = false;
+    console.log('Button state reset');
   }, 1500);
 }
 
 /**
  * Reset product page UI state
+ * CRITICAL FIX: Reset UI but NOT listener flag
  */
 function resetProductPageUI() {
   // Reset quantity to 1
@@ -139,8 +157,9 @@ function resetProductPageUI() {
   // Reset adding flag
   isAddingToCart = false;
   
-  // Reset listeners flag so they can be reattached
-  listenersAttached = false;
+  // CRITICAL FIX: DO NOT reset listenersAttached flag
+  // This prevents duplicate listener attachment
+  console.log('Product page UI reset (listeners remain attached)');
 }
 
 // Initialize when DOM is ready

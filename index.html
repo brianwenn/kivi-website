@@ -2604,17 +2604,16 @@
                 navLinks.classList.remove('active');
             }
 
-            // CRITICAL FIX: Reset product page UI when navigating to it
+            // CRITICAL FIX: Only reset UI state, do NOT re-initialize listeners
             if (pageId === 'product') {
                 // Wait for DOM to be ready
                 setTimeout(function () {
+                    // Only reset visual state
                     if (typeof resetProductPageUI === 'function') {
                         resetProductPageUI();
                     }
-                    // Re-initialize to ensure event listeners are attached
-                    if (typeof initProductPage === 'function') {
-                        initProductPage();
-                    }
+                    // REMOVED: Do NOT call initProductPage() here
+                    // Listeners are attached once on page load and persist
                 }, 0);
             }
 
